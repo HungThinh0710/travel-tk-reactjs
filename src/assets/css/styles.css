@@ -24,7 +24,6 @@
 
 .c-navigation{
     width: 100%;
-    /* background: lightgrey; */
     padding: 20px 0;
 }
 
@@ -47,6 +46,11 @@
     font-weight: bold;
     transition: all ease 0.2s;
 
+}
+
+.active a{
+    color: #F34E3A!important;
+    /* background-attachment: red; */
 }
 
 .nav-item a:hover{
