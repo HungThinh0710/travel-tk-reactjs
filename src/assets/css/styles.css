@@ -1,0 +1,126 @@
+@font-face {
+    font-family: "SanFrancisco-Regular";
+    src: url(../fonts/SanFrancisco/SanFranciscoText-Regular.otf);
+}
+
+@font-face {
+    font-family: "SanFrancisco-Bold";
+    src: url(../fonts/SanFrancisco/SanFranciscoText-Bold.otf);
+}
+
+@font-face {
+    font-family: "SanFrancisco-Italic";
+    src: url(../fonts/SanFrancisco/SanFranciscoText-Italic.otf);
+}
+
+@font-face {
+    font-family: "SanFrancisco-Thin";
+    src: url(../fonts/SanFrancisco/SanFranciscoText-Thin.otf);
+}
+
+* {
+    font-family: 'SanFrancisco-Regular'!important;
+}
+
+.c-navigation{
+    width: 100%;
+    /* background: lightgrey; */
+    padding: 20px 0;
+}
+
+.nav-box{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.nav-item{
+    display: block;
+    float: left;
+    padding: 0 20px;
+}
+
+.nav-item a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all ease 0.2s;
+
+}
+
+.nav-item a:hover{
+    color: #F34E3A;
+    text-decoration: none;
+    font-weight: bold;
+
+}
+
+.logo-box img{
+    height: 29px;
+}
+
+.nav-right svg path{
+    transition: all ease 0.2s;
+}
+.nav-right svg:hover path{
+    fill: #F34E3A!important;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* height: 300px; */
+    /* background-color: lightcoral; */
+}
+
+.list-for-footer{ padding-top: 6px; }
+
+.list-for-footer ul{
+    list-style-type: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    line-height: 25px;;
+}
+
+.list-for-footer li {
+    display: block;
+    font-size: 13px;
+}
+
+.list-for-footer ul li a{
+    text-decoration: none;
+    color: #605E5E;
+    transition: all ease 0.1s;
+
+}
+
+.list-for-footer ul li a:hover{
+    text-decoration: none;
+    font-weight: bold;
+    color: #F34E3A!important;
+
+}
+
+.text-footer{
+    line-height: 25px;
+    font-size: 13px;;
+}
+
+.end-footer{
+    padding: 0!important;
+    width: 100%;
+    background-color: #05073C;
+}
+
+.end-footer span{
+    padding: 20px;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
