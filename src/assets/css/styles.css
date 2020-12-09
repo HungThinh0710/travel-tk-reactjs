@@ -166,4 +166,18 @@
     line-height: normal;
 }
 
+.main-color-text{
+    color: #F34E3A;
+}
 
+.i-color-facebook{
+    color: #3A5999;
+}
+
+.text-decoration-none{
+    text-decoration: none!important;
+}
+
+.text-color-black{
+    color: black;
+}
