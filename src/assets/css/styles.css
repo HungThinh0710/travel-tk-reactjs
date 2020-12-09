@@ -180,4 +180,9 @@
 
 .text-color-black{
     color: black;
+    transition: all ease 0.2s;
+}
+
+.text-color-black:hover{
+    color: #F34E3A;
 }
