@@ -1,0 +1,19 @@
+.welcome-text {
+    position: absolute;
+width: 288px;
+height: 105px;
+left: 816px;
+top: 347px;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 70px;
+line-height: 105px;
+/* identical to box height */
+
+text-align: center;
+letter-spacing: 0.0025em;
+
+color: #FFFFFF;
+}
