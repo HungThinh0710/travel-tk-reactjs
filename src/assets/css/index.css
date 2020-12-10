@@ -1,0 +1,125 @@
+@media screen and (max-width: 600px) {
+    .heading .img-background{
+        width: 100%;
+        height: 250px!important;   
+        background-size: cover;
+    }
+}
+
+
+
+.heading{
+    /* position: relative; */
+    width: 100%;
+    height: 400px;
+}
+
+.heading .img-background{
+    position: relative;
+    background-repeat: no-repeat; 
+    background-image: url('../images/heading-home.jfif');
+    width: 100%;
+    height: 400px;   
+    background-size: cover;
+}
+
+.heading .overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: black;
+    height: inherit;
+    width: 100%;
+    opacity: 0.6;
+}
+
+.img-background .text-in-bg{
+    color: white;
+    position: absolute;
+    top:35%;
+    left: 0;
+    /* z-index: ; */
+    margin: 0;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.filter-search-group{
+    display: flex;
+    /* width: 100%; */
+    justify-content: center;
+    /* background-color: lightcyan; */
+}
+
+.filter-search-group .border-form{
+    /* padding: 0; */
+    display: flex;
+    background-color: rgba(255, 249, 249, 0.507);
+    padding: 5px;
+    border-radius: 40px;
+    /* opacity: 0.5; */
+    /* border: 4px solid #F34E3A; */
+    
+}
+.filter-search-group select{
+    float: left;
+    padding: 15px;
+    border-radius: 40px 0px 0px 40px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.filter-search-group select:focus{
+    padding: 15px;
+}
+.filter-search-group .text-search{ background-color: white;}
+.filter-search-group .text-search input{
+    float: left;
+    border: none;
+    outline: none;
+    padding: 15px;
+}
+.filter-search-group .text-search .icon{
+    float:left ;
+    padding: 15px;
+    color:#F34E3A
+}
+
+.filter-search-group button{
+    float: left;
+    border: none;
+    padding: 0 45px;
+    border-radius: 0 40px 40px 0;
+    background-color: #F34E3A;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.recommend-two-row .left-side{
+    color: white;
+    /* display: block;
+    height: 200px; */
+    background-color: #F34E3A;
+    padding: 40px;
+}
+
+.recommend-two-row .right-side{
+    /* display: block;
+    height: 200px; */
+    background-color: white;
+    padding: 40px;
+}
+
+.recommend-two-row{ width: 100%;}
+.recommend-two-row .right-side h6{ color: #605E5E;}
+.recommend-two-row .right-side h3{ color: #F34E3A;}
+
+
+
+
+
+/* .recommend-two-row .left-side .te */
