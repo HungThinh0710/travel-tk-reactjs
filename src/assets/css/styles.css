@@ -170,6 +170,12 @@
     color: #F34E3A;
 }
 
+.hover-bold-main:hover{
+    font-weight: bold;
+    color: #F34E3A;
+}
+
+
 .i-color-facebook{
     color: #3A5999;
 }
