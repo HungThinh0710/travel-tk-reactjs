@@ -1,0 +1,109 @@
+@media screen and (max-width: 600px) {
+    .nav-item {
+        width: 100%!important;
+
+    }
+    .back-btn{
+        margin-bottom: 15px;
+    }
+
+    .m-pt5{
+        padding-top: 5px!important
+    }
+}
+
+
+.profile-group .image-profile img{
+    height: 100%;
+    width: 100%;
+}
+
+.profile-group .profile-info .first-row{
+    /* display: inline-block; */
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+
+.profile-info .first-row .username{
+    float: left;
+}
+
+
+
+.profile-group .profile-info .description{
+    font-size: 12px;
+    text-justify: auto;
+}
+
+.tab-group .nav-item{
+    padding: 13px 40px;
+    background-color: #FFDFDF;
+    color: #F34E3A;
+    font-weight: bold;
+    margin: 0 10px;
+    /* width: 100%; */
+}
+
+.tab-group .active{
+    background-color: #F34E3A!important;
+    color: white!important;
+}
+
+.edit-profile{
+    background: white;
+    color: #F34E3A;
+    border-radius: 25px;
+    border: 0.5px solid #F34E3A;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+.edit-profile:hover{
+    background-color: #F34E3A;
+    color: #FFFFFF;
+}
+
+.group-editable input{
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+}
+
+.button-group .edit-profile:nth-child(1){
+    margin-right: 10px;
+}
+.success-edited{
+    background: white;
+    color: #3EB414;
+    border-radius: 25px;
+    border: 0.5px solid #3EB414;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: all ease 0.2s;
+    display: none;
+    pointer-events: none;
+}
+
+.history-tour .title-row th{
+    background-color: #F34E3A;
+    color: white;
+}
+
+.back-btn{
+    background: white;
+    color: #F34E3A;
+    border-radius: 25px;
+    border: 0.5px solid #F34E3A;
+    padding: 1px 35px;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+.back-btn:hover{
+    background-color: #F34E3A;
+    color: #FFFFFF;
+}
