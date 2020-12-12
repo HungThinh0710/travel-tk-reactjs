@@ -72,7 +72,7 @@
             </svg> Tour</a>
           <ul class="c-sidebar-nav-dropdown-items">
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="listour.html"><span class="c-sidebar-nav-icon"></span>List tours</a></li>
-            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/breadcrumb.html"><span class="c-sidebar-nav-icon"></span>Add tour</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="addtour.html"><span class="c-sidebar-nav-icon"></span>Add tour</a></li>
           </ul>
         </li>
         <li class="c-sidebar-nav-title">NEWS MANAGEMENT</li>
@@ -81,7 +81,7 @@
               <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
             </svg> News</a>
           <ul class="c-sidebar-nav-dropdown-items">
-            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="buttons/buttons.html"><span class="c-sidebar-nav-icon"></span>List news</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="listnews.html"><span class="c-sidebar-nav-icon"></span>List news</a></li>
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="buttons/buttons.html"><span class="c-sidebar-nav-icon"></span>Add news</a></li>
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="buttons/buttons.html"><span class="c-sidebar-nav-icon"></span> Buttons</a></li>
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="buttons/button-group.html"><span class="c-sidebar-nav-icon"></span> Buttons Group</a></li>
@@ -144,7 +144,7 @@
               <div class="dropdown-header bg-light py-2"><strong>Account</strong></div><a class="dropdown-item" href="#">
                 <svg class="c-icon mr-2">
                   <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-                </svg> Profile</a><a class="dropdown-item" href="#">
+                </svg> Profile</a><a class="dropdown-item" href="admin-profile.html">
                 <svg class="c-icon mr-2">
                   <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
                 </svg> Settings</a><a class="dropdown-item" href="#">
@@ -158,21 +158,135 @@
           <!-- Breadcrumb-->
           <ol class="breadcrumb border-0 m-0">
             <li class="breadcrumb-item">Home</li>
-            <li class="breadcrumb-item"><a href="#">Admin</a></li>
-            <li class="breadcrumb-item active">Dashboard</li>
+            <li class="breadcrumb-item"><a href="#">Tour</a></li>
+            <li class="breadcrumb-item active">List tour</li>
             <!-- Breadcrumb Menu-->
           </ol>
         </div>
       </header>
       <div class="c-body">
         <main class="c-main">
-          <div class="container-fluid">
-            <div class="fade-in"></div>
-            
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h4 class="card-title mb-0">List tour</h4>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="card-body">
+              <table class="table table-responsive-sm">
+                <thead>
+                  <tr>
+                    <th>Tour</th>
+                    <th>Start time</th>
+                    <th>End time</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                   <td>
+                    <div class="form-group row">
+                      <div class="col-md-9">
+                        <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date">
+                      </div>
+                    </div>
+                   </td>
+                   <td>
+                    <div class="form-group row">
+                      <div class="col-md-9">
+                        <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date">
+                      </div>
+                    </div>
+                   </td>
+                   <td>
+                    <div class="form-group row">
+                      <div class="col-md-9">
+                        <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date">
+                      </div>
+                    </div>
+                   </td>
+                   <td>
+                    <div class="form-group row col-md-9">
+                      <select class="form-control">
+                        <option>Active</option>
+                        <option>Pending</option>
+                        <option></option>
+                      </select>
+                    </div>
+                   </td>
+                  </tr>
+                  <tr>
+                    <td>Ha Long Bay #1234</td>
+                    <td>03/11/2020</td>
+                    <td>06/11/2020</td>
+                    <td><span class="badge badge-success">Active</span></td>
+                    <td>
+                      <div>
+                        <button class="btn btn-sm btn-outline-primary" type="Edit"> Edit</button>
+                        <button class="btn btn-sm btn-outline-danger" type="Delete"> Delete</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Ha Long Bay #1234</td>
+                    <td>03/11/2020</td>
+                    <td>06/11/2020</td>
+                    <td><span class="badge badge-success">Active</span></td>
+                    <td><div>
+                      <button class="btn btn-sm btn-outline-primary" type="Edit"> Edit</button>
+                      <button class="btn btn-sm btn-outline-danger" type="Delete"> Delete</button>
+                      </div></td>
+                  </tr>
+                  <tr>
+                    <td>Ha Long Bay #1234</td>
+                    <td>03/11/2020</td>
+                    <td>06/11/2020</td>
+                    <td><span class="badge badge-success">Active</span></td>
+                    <td><div>
+                      <button class="btn btn-sm btn-outline-primary" type="Edit"> Edit</button>
+                      <button class="btn btn-sm btn-outline-danger" type="Delete"> Delete</button>
+                      </div></td>
+                  </tr>
+                  <tr>
+                    <td>Ha Long Bay #1234</td>
+                    <td>03/11/2020</td>
+                    <td>06/11/2020</td>
+                    <td><span class="badge badge-success">Active</span></td>
+                    <td><div>
+                      <button class="btn btn-sm btn-outline-primary" type="Edit"> Edit</button>
+                      <button class="btn btn-sm btn-outline-danger" type="Delete"> Delete</button>
+                      </div></td>
+                  </tr>
+                  <tr>
+                    <td>Ha Long Bay #1234</td>
+                    <td>03/11/2020</td>
+                    <td>06/11/2020</td>
+                    <td><span class="badge badge-success">Active</span></td>
+                    <td><div>
+                      <button class="btn btn-sm btn-outline-primary" type="Edit"> Edit</button>
+                      <button class="btn btn-sm btn-outline-danger" type="Delete"> Delete</button>
+                      </div></td>
+                  </tr>
+                </tbody>
+              </table>
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>  
+            </div>
           </div>
+        </div>
         </main>
         <footer class="c-footer">
-          <div><a href="#">CoreUI</a>© 2020 4th Group VKU.</div>
+          <div><a href="#"></a> © 2020 4th Group VKU.</div>
           <div class="ml-auto">Powered by&nbsp;<a href="#">4th Group VKU</a></div>
         </footer>
       </div>

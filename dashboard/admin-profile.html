@@ -35,6 +35,7 @@
     <meta name="theme-color" content="#ffffff">
     <!-- Main styles for this application-->
     <link href="css/style.css" rel="stylesheet">
+     <link href="admin-profile.css" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics-->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
     <script>
@@ -144,7 +145,7 @@
               <div class="dropdown-header bg-light py-2"><strong>Account</strong></div><a class="dropdown-item" href="#">
                 <svg class="c-icon mr-2">
                   <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-                </svg> Profile</a><a class="dropdown-item" href="#">
+                </svg> Profile</a><a class="dropdown-item" href="admin-profile.html">
                 <svg class="c-icon mr-2">
                   <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
                 </svg> Settings</a><a class="dropdown-item" href="#">
@@ -168,7 +169,51 @@
         <main class="c-main">
           <div class="container-fluid">
             <div class="fade-in"></div>
-            
+           <div class="card">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h4 class="card-title mb-0">Profile information</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="row">
+                <div class="card">
+                  <div class="col-md-3">
+                    <img src="" alt="">
+                    <h5 class="card-title">Admin</h5>
+                    <p>DOB: 07/10/1999</p>
+                    <p>Street: 435 Le Van Hien</p>
+                    <p>City:Danang</p>
+                    <p>Created Date:10/11/2020 </p>
+                    <p>Role: Administrator</p>
+                    <button class="btn btn-sm btn-primary" type="Edit"> Edit</button>
+                    <button class="btn btn-sm btn-danger" type="Delete"> Delete</button>
+                    <button class="btn btn-sm btn-primary" type="Edit"> Edit</button>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="col-md-6 mb-4">
+                    <div class="nav-tabs-boxed">
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Profile</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Messages</a></li>
+                      </ul>
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="home" role="tabpanel">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                        <div class="tab-pane" id="profile" role="tabpanel">2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                        <div class="tab-pane" id="messages" role="tabpanel">3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+              </div> 
+             </div>
+            </div>
+           </div>
+          </div>
           </div>
         </main>
         <footer class="c-footer">
