@@ -169,51 +169,219 @@
         <main class="c-main">
           <div class="container-fluid">
             <div class="fade-in"></div>
-           <div class="card">
-            <div class="card-body">
-              <div class="d-flex justify-content-between">
-                <div>
-                  <h4 class="card-title mb-0">Profile information</h4>
+            <div class="container-fluid">
+              <div class="fade-in"></div>
+             <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <h4 class="card-title mb-0">Profile information</h4>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="card">
-              <div class="row">
-                <div class="card">
-                  <div class="col-md-3">
-                    <img src="" alt="">
-                    <h5 class="card-title">Admin</h5>
-                    <p>DOB: 07/10/1999</p>
-                    <p>Street: 435 Le Van Hien</p>
-                    <p>City:Danang</p>
-                    <p>Created Date:10/11/2020 </p>
-                    <p>Role: Administrator</p>
-                    <button class="btn btn-sm btn-primary" type="Edit"> Edit</button>
-                    <button class="btn btn-sm btn-danger" type="Delete"> Delete</button>
-                    <button class="btn btn-sm btn-primary" type="Edit"> Edit</button>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="col-md-6 mb-4">
-                    <div class="nav-tabs-boxed">
-                      <ul class="nav nav-tabs" role="tablist">
-                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Profile</a></li>
-                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Messages</a></li>
-                      </ul>
-                      <div class="tab-content">
-                        <div class="tab-pane active" id="home" role="tabpanel">1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-                        <div class="tab-pane" id="profile" role="tabpanel">2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-                        <div class="tab-pane" id="messages" role="tabpanel">3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                <div class="row">
+                  <div class=" col-sm-4">
+                  <div class="card">
+                   <img src="assets/img/circle_avatar.png" alt="">
+                     <div class="text-center">
+                      <h5 class="card-title">Admin</h5>
+                      <p>DOB: 07/10/1999</p>
+                      <p>Street: 435 Le Van Hien</p>
+                      <p>City:Danang</p>
+                      <p>Created Date:10/11/2020 </p>
+                      <p>Role: Administrator</p>
+                     </div>
+                     <div class=" card">
+                      <button class="btn btn-sm btn-primary" type="Edit">Google</button>
+                     </div>
+                     <div class="card">
+                       <button class="btn btn-sm btn-primary" type="Delete">Facebook</button>
                       </div>
+                      <div class="card">
+                        <button class="btn btn-sm btn-primary" type="Edit"> Twitter</button>
+                      </div>
+                      
                     </div>
-                  </div> 
-                </div>
-              </div> 
-             </div>
-            </div>
-           </div>
-          </div>
+                  </div>
+                  <div class="col-sm-8 ">
+                  <div class="card">
+                    <div class="nav-tabs-boxed">
+                        <ul class="nav nav-tabs" role="tablist">
+                          <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home">General</a></li>
+                          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Password</a></li>
+                          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Social account</a></li>
+                        </ul>
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="general" role="tabpanel">
+                            <div class="row">
+                              <div class="card-body">
+                                <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                                  <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="text-input">Username:</label>
+                                    <div class="col-md-9">
+                                      <p class="form-control-static">Vux</p>
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="email-input">Date of Birth:</label>
+                                    <div class="col-md-9">
+                                      <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date"><span class="help-block">Please enter a valid date</span>
+                                    </div>
+                                  </div>
+                                    <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="textarea-input">Description:</label>
+                                    <div class="col-md-9">
+                                      <textarea class="form-control" id="textarea-input" name="textarea-input" rows="9" placeholder="Content.."></textarea>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+
+                              <div class="card-body">
+                                <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                                  <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="text-input">Street:</label>
+                                    <div class="col-md-9">
+                                      <input class="form-control" id="text-input" type="text" name="text-input" placeholder="Street">
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="">City:</label>
+                                    <div class="col-md-9">
+                                      <select class="form-control form-control-sm" id="select3" name="select3">
+                                        <option value="0">Please select</option>
+                                        <option value="1">Option #1</option>
+                                        <option value="2">Option #2</option>
+                                        <option value="3">Option #3</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                    <div class="form-group row">
+                                    <label class="col-md-3 col-form-label" for="textarea-input">Email:</label>
+                                    <div class="col-md-9">
+                                      <p class="form-control-static">17it2@vku.udn.vn</p>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane" id="profile" role="tabpanel"><div class="row">
+                            <div class="card-body">
+                              <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                                <div class="form-group row">
+                                  <label class="col-md-3 col-form-label" for="text-input">Username:</label>
+                                  <div class="col-md-9">
+                                    <p class="form-control-static">Vux</p>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-md-3 col-form-label" for="email-input">Date of Birth:</label>
+                                  <div class="col-md-9">
+                                    <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date"><span class="help-block">Please enter a valid date</span>
+                                  </div>
+                                </div>
+                                  <div class="form-group row">
+                                  <label class="col-md-3 col-form-label" for="textarea-input">Description:</label>
+                                  <div class="col-md-9">
+                                    <textarea class="form-control" id="textarea-input" name="textarea-input" rows="9" placeholder="Content.."></textarea>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+
+                            <div class="card-body">
+                              <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                                <div class="form-group row">
+                                  <label class="col-md-3 col-form-label" for="text-input">Street:</label>
+                                  <div class="col-md-9">
+                                    <input class="form-control" id="text-input" type="text" name="text-input" placeholder="Street">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-md-3 col-form-label" for="">City:</label>
+                                  <div class="col-md-9">
+                                    <select class="form-control form-control-sm" id="select3" name="select3">
+                                      <option value="0">Please select</option>
+                                      <option value="1">Option #1</option>
+                                      <option value="2">Option #2</option>
+                                      <option value="3">Option #3</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                  <div class="form-group row">
+                                  <label class="col-md-3 col-form-label" for="textarea-input">Email:</label>
+                                  <div class="col-md-9">
+                                    <p class="form-control-static">17it2@vku.udn.vn</p>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div></div>
+                          <div class="tab-pane" id="messages" role="tabpanel"><div class="row">
+                            <div class="card-body">
+                              <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                                <div class="form-group row">
+                                  <label class="col-md-3 col-form-label" for="text-input">Username:</label>
+                                  <div class="col-md-9">
+                                    <p class="form-control-static">Vux</p>
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-md-3 col-form-label" for="email-input">Date of Birth:</label>
+                                  <div class="col-md-9">
+                                    <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date"><span class="help-block">Please enter a valid date</span>
+                                  </div>
+                                </div>
+                                  <div class="form-group row">
+                                  <label class="col-md-3 col-form-label" for="textarea-input">Description:</label>
+                                  <div class="col-md-9">
+                                    <textarea class="form-control" id="textarea-input" name="textarea-input" rows="9" placeholder="Content.."></textarea>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+
+                            <div class="card-body">
+                              <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                                <div class="form-group row">
+                                  <label class="col-md-3 col-form-label" for="text-input">Street:</label>
+                                  <div class="col-md-9">
+                                    <input class="form-control" id="text-input" type="text" name="text-input" placeholder="Street">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label class="col-md-3 col-form-label" for="">City:</label>
+                                  <div class="col-md-9">
+                                    <select class="form-control form-control-sm" id="select3" name="select3">
+                                      <option value="0">Please select</option>
+                                      <option value="1">Option #1</option>
+                                      <option value="2">Option #2</option>
+                                      <option value="3">Option #3</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                  <div class="form-group row">
+                                  <label class="col-md-3 col-form-label" for="textarea-input">Email:</label>
+                                  <div class="col-md-9">
+                                    <p class="form-control-static">17it2@vku.udn.vn</p>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div></div>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <button class="btn btn-sm btn-primary" type="Cancel">submit</button>
+                        <button class="btn btn-sm btn-danger" type="Preview">reset</button>
+                      </div>
+                    </div> 
+                  </div>
+                </div> 
+               </div>
+              </div>
           </div>
         </main>
         <footer class="c-footer">
