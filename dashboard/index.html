@@ -49,14 +49,11 @@
       // Bootstrap ID
       gtag('config', 'UA-118965717-5');
     </script>
-    <link href="vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
   </head>
   <body class="c-app">
     <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
       <div class="c-sidebar-brand d-lg-down-none">
-        <svg class="c-sidebar-brand-full" width="118" height="46" alt="CoreUI Logo">
-          <use xlink:href="assets/brand/coreui.svg#full"></use>
-        </svg>
+        <img src="assets/img/logo-img.png" alt="">
         <svg class="c-sidebar-brand-minimized" width="46" height="46" alt="CoreUI Logo">
           <use xlink:href="assets/brand/coreui.svg#signet"></use>
         </svg>
@@ -64,12 +61,12 @@
       <ul class="c-sidebar-nav">
         <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="index.html">
             <svg class="c-sidebar-nav-icon">
-              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
-            </svg> Dashboard<span class="badge badge-info">NEW</span></a></li>
+              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bank"></use>
+            </svg> Dashboard<span class="badge badge-info"></span></a></li>
         <li class="c-sidebar-nav-title">TOUR MANAGEMENT</li>
         <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
             <svg class="c-sidebar-nav-icon">
-              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bank"></use>
             </svg> Tour</a>
           <ul class="c-sidebar-nav-dropdown-items">
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="listour.html"><span class="c-sidebar-nav-icon"></span>List tours</a></li>
@@ -79,34 +76,31 @@
         <li class="c-sidebar-nav-title">NEWS MANAGEMENT</li>
         <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
             <svg class="c-sidebar-nav-icon">
-              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
+              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-book"></use>
             </svg> News</a>
           <ul class="c-sidebar-nav-dropdown-items">
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="listnews.html"><span class="c-sidebar-nav-icon"></span>List news</a></li>
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="addnew.html"><span class="c-sidebar-nav-icon"></span>Add news</a></li>
-            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="buttons/buttons.html"><span class="c-sidebar-nav-icon"></span> Buttons</a></li>
-            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="buttons/button-group.html"><span class="c-sidebar-nav-icon"></span> Buttons Group</a></li>
-            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="buttons/dropdowns.html"><span class="c-sidebar-nav-icon"></span> Dropdowns</a></li>
-            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="buttons/brand-buttons.html"><span class="c-sidebar-nav-icon"></span> Brand Buttons</a></li>
+            
           </ul>
         </li>
         <li class="c-sidebar-nav-title">OTHERS</li>
         <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
             <svg class="c-sidebar-nav-icon">
-              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-star"></use>
+              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-group"></use>
             </svg> Customers</a>
           <ul class="c-sidebar-nav-dropdown-items">
-            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="icons/coreui-icons-brand.html">List customers</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="listcustomers.html">List customers</a></li>
            
           </ul>
         </li>
         <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
             <svg class="c-sidebar-nav-icon">
-              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
+              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-wallet"></use>
             </svg>Promotions</a>
           <ul class="c-sidebar-nav-dropdown-items">
-            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="notifications/alerts.html"><span class="c-sidebar-nav-icon"></span> List Promotions</a></li>
-            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="notifications/alerts.html"><span class="c-sidebar-nav-icon"></span> Add Promotions</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href=""><span class="c-sidebar-nav-icon"></span> List Promotions</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href=""><span class="c-sidebar-nav-icon"></span> Add Promotions</a></li>
           </ul>
         </li>
       </ul>
@@ -127,25 +121,21 @@
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-menu"></use>
           </svg>
         </button>
-        <ul class="c-header-nav d-md-down-none">
-          <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Dashboard</a></li>
-          <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Users</a></li>
-          <li class="c-header-nav-item px-3"><a class="c-header-nav-link" href="#">Settings</a></li>
-        </ul>
+       
         <ul class="c-header-nav ml-auto mr-4">
           <li class="c-header-nav-item d-md-down-none mx-2"><a class="c-header-nav-link" href="#">
             <svg class="c-icon">
               <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
             </svg></a></li>
-        <li class="c-header-nav-item d-md-down-none mx-2"><a class="c-header-nav-link" href="">
+        <li class="c-header-nav-item d-md-down-none mx-2"><a class="c-header-nav-link" href="#">
           <li class="c-header-nav-item dropdown"><a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
               <div class="c-avatar"><img class="c-avatar-img" src="assets/img/avatars/6.jpg" alt="user@email.com"></div>
             </a>
             <div class="dropdown-menu dropdown-menu-right pt-0">
-              <div class="dropdown-header bg-light py-2"><strong>Account</strong></div><a class="dropdown-item" href="#">
+              <div class="dropdown-header bg-light py-2"><strong>Account</strong></div><a class="dropdown-item" href="admin-profile.html">
                 <svg class="c-icon mr-2">
                   <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-                </svg> Profile</a><a class="dropdown-item" href="admin-profile.html">
+                </svg> Profile</a><a class="dropdown-item" href="#">
                 <svg class="c-icon mr-2">
                   <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
                 </svg> Settings</a><a class="dropdown-item" href="#">

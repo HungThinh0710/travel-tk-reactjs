@@ -149,9 +149,11 @@
         <div class="c-subheader px-3">
           <!-- Breadcrumb-->
           <ol class="breadcrumb border-0 m-0">
-            <li class="breadcrumb-item">Dasboard</li>
-            <li class="breadcrumb-item"><a href="#">Profile</a></li>
-            
+            <li class="breadcrumb-item">Home</li>
+            <li class="breadcrumb-item"><a href="#">Customers</a></li>
+            <li class="breadcrumb-item active">List customers</li>
+            <li class="breadcrumb-item active">Detail Account</li>
+
             <!-- Breadcrumb Menu-->
           </ol>
         </div>
@@ -174,9 +176,9 @@
                 <div class="row">
                   <div class=" col-sm-3">
                   <div class="card">
-                      <div class="text-center">
-                        <img class=" round-img" src="assets/img/img_avatar.png" alt="">
-                      </div>
+                    <div class="text-center">
+                      <img class=" round-img " src="assets/img/img_avatar.png" alt="">
+                    </div>
                      <div class="text-center">
                       <h5 class="card-title">Admin</h5>
                       <p>DOB: 07/10/1999</p>
@@ -202,140 +204,175 @@
                     <div class="nav-tabs-boxed">
                         <ul class="nav nav-tabs" role="tablist">
                           <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home">General</a></li>
-                          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Password</a></li>
-                          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Social account</a></li>
+                          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Tour History</a></li>
                         </ul>
                         <div class="tab-content">
-                          <div class="tab-pane active" id="general" role="tabpanel">
-                            <div class="row">
-                              <div class="card-body">
-                                <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
-                                  <div class="form-group row">
-                                    <label class="col-md-3 col-form-label" for="text-input">Username:</label>
-                                    <div class="col-md-9">
-                                      <p class="form-control-static">Vux</p>
+                            <div class="tab-pane active" id="home" role="tabpanel">
+                                <div class="row">
+                                    <div class="card-body">
+                                      <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                                          <div class="form-group row">
+                                              <label class="col-md-3 col-form-label" for="text-input">ID:</label>
+                                              <div class="col-md-9">
+                                                <p class="form-control-static">NHT0678VIP</p>
+                                              </div>
+                                            </div>
+                                        <div class="form-group row">
+                                          <label class="col-md-3 col-form-label" for="text-input">Name:</label>
+                                          <div class="col-md-9">
+                                            <p class="form-control-static">Nguyễn Hưng Thịnh</p>
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-md-3 col-form-label" for="email-input">DoB:</label>
+                                          <div class="col-md-9">
+                                            <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date">
+                                          </div>
+                                        </div>
+                                          <div class="form-group row">
+                                          <label class="col-md-3 col-form-label" for="textarea-input">Type:</label>
+                                          <div class="col-md-9">
+                                              <select class="form-control form-control-sm" id="select3" name="select3">
+                                                <option value="0">Please select</option>
+                                                <option value="1">VIP</option>
+                                                <option value="2">Gold</option>
+                                                <option value="3">Silver</option>
+                                              </select>
+                                            </div>
+                                        </div>
+                                      </form>
+                                    </div>
+                                    <div class="card-body">
+                                      <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                                        <div class="form-group row">
+                                          <label class="col-md-3 col-form-label" for="text-input">Street:</label>
+                                          <div class="col-md-9">
+                                              <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-md-3 col-form-label" for="">City:</label>
+                                          <div class="col-md-9">
+                                            <select class="form-control form-control-sm" id="select3" name="select3">
+                                              <option value="0">Please select</option>
+                                              <option value="1">Option #1</option>
+                                              <option value="2">Option #2</option>
+                                              <option value="3">Option #3</option>
+                                            </select>
+                                          </div>
+                                        </div>
+                                          <div class="form-group row">
+                                          <label class="col-md-3 col-form-label" for="textarea-input">Email:</label>
+                                          <div class="col-md-9">
+                                              <input class="form-control" id="text-input" type="text" name="text-input" >
+                                          </div>
+                                        </div>
+                                        <div class="form-group row">
+                                          <label class="col-md-3 col-form-label" for="textarea-input">SĐT:</label>
+                                          <div class="col-md-9">
+                                              <input class="form-control" id="text-input" type="text" name="text-input" >
+                                          </div>
+                                        </div>
+                                      </form>
                                     </div>
                                   </div>
-                                  <div class="form-group row">
-                                    <label class="col-md-3 col-form-label" for="email-input">Date of Birth:</label>
-                                    <div class="col-md-9">
-                                      <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date"><span class="help-block">Please enter a valid date</span>
+                            </div>
+                            <div class="tab-pane" id="profile" role="tabpanel">
+                                <div class="row">
+                                <div class="card-body">
+                                  <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                                    <div class="row">
+                                        <div class="card-body">
+                                      <table class="table table-responsive-sm">
+                                        <thead>
+                                          <tr>
+                                            <th>ID</th>
+                                            <th>Tour Code</th>
+                                            <th>Tên tour</th>
+                                            <th>Ngày khởi hành</th>
+                                            <th>Điểm đến</th>
+                                            <th>Trạng thái</th>
+                                            <th>Giá</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr >
+                                            <td>1</td>
+                                            <td>HL4686</td>
+                                            <td><a href="tourDetail.html">Hạ Long-2N3D</a></td>
+                                            <td>17/11/2020</td>
+                                            <td>Hạ Long</td>
+                                            <td>
+                                                <span class="badge badge-success">Hoàn thành</span>
+                                            </td>
+                                            <td>345.000VND</td>
+                                          </tr>
+                                          <tr> 
+                                            <td>1</td>
+                                            <td>HL4686</td>
+                                            <td><a href="tourDetail.html">Hạ Long-2N3D</a></td>
+                                            <td>17/11/2020</td>
+                                            <td>Hạ Long</td>
+                                            <td>
+                                                <span class="badge badge-success">Hoàn thành</span>
+                                            </td>
+                                            <td>345.000VND</td>
+                                          </tr>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>HL4686</td>
+                                            <td><a href="tourDetail.html">Hạ Long-2N3D</a></td>
+                                            <td>17/11/2020</td>
+                                            <td>Hạ Long</td>
+                                            <td>
+                                                <span class="badge badge-warning">Đang chờ</span>
+                                            </td>
+                                            <td>345.000VND</td>
+                                          </tr>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>HL4686</td>
+                                            <td><a href="tourDetail.html">Hạ Long-2N3D</a></td>
+                                            <td>17/11/2020</td>
+                                            <td>Hạ Long</td>
+                                            <td>
+                                                <span class="badge badge-success">Hoàn thành</span>
+                                            </td>
+                                            <td>345.000VND</td>
+                                          </tr>
+                                          <tr>
+                                            <td>1</td>
+                                            <td>HL4686</td>
+                                            <td><a href="tourDetail.html">Hạ Long-2N3D</a></td>
+                                            <td>17/11/2020</td>
+                                            <td>Hạ Long</td>
+                                            <td>
+                                                <span class="badge badge-danger">Đã Hủy</span>
+                                            </td>
+                                            <td>345.000VND</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                      </ul>  
                                     </div>
                                   </div>
-                                    <div class="form-group row">
-                                    <label class="col-md-3 col-form-label" for="textarea-input">Description:</label>
-                                    <div class="col-md-9">
-                                      <textarea class="form-control" id="textarea-input" name="textarea-input" rows="9" placeholder="Content.."></textarea>
-                                    </div>
-                                  </div>
-                                </form>
+                                  </form>
+                                </div>
                               </div>
-
-                              <div class="card-body">
-                                <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
-                                  <div class="form-group row">
-                                    <label class="col-md-3 col-form-label" for="text-input">Street:</label>
-                                    <div class="col-md-9">
-                                      <input class="form-control" id="text-input" type="text" name="text-input" placeholder="Street">
-                                    </div>
-                                  </div>
-                                  <div class="form-group row">
-                                    <label class="col-md-3 col-form-label" for="">City:</label>
-                                    <div class="col-md-9">
-                                      <select class="form-control form-control-sm" id="select3" name="select3">
-                                        <option value="0">Please select</option>
-                                        <option value="1">Option #1</option>
-                                        <option value="2">Option #2</option>
-                                        <option value="3">Option #3</option>
-                                      </select>
-                                    </div>
-                                  </div>
-                                    <div class="form-group row">
-                                    <label class="col-md-3 col-form-label" for="textarea-input">Email:</label>
-                                    <div class="col-md-9">
-                                      <p class="form-control-static">17it2@vku.udn.vn</p>
-                                    </div>
-                                  </div>
-                                </form>
-                              </div>
                             </div>
                           </div>
-                          <div class="tab-pane" id="profile" role="tabpanel"><div class="row">
-                            <div class="card-body">
-                              <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
-                                <div class="form-group row">
-                                  <label class="col-md-3 col-form-label" for="text-input">Old Password:</label>
-                                  <div class="col-md-9">
-                                    <input class="form-control" id="text-input" type="text" name="text-input" placeholder="Old Password">
-                                  </div>
-                                </div>
-                                <div class="form-group row">
-                                  <label class="col-md-3 col-form-label" for="email-input">New Password:</label>
-                                  <div class="col-md-9">
-                                    <input class="form-control" id="text-input" type="text" name="text-input" placeholder="New Password">
-                                  </div>
-                                </div>
-                                  <div class="form-group row">
-                                  <label class="col-md-3 col-form-label" for="textarea-input">Confirm Password:</label>
-                                  <div class="col-md-9">
-                                    <input class="form-control" id="text-input" type="text" name="text-input" placeholder="Confirm Password">
-                                  </div>
-                                </div>
-                              </form>
-                            </div>
-                          </div>
-                        </div>
-                          <div class="tab-pane" id="messages" role="tabpanel"><div class="row">
-                            <div class="card-body">
-                              <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
-                                <div class="form-group row">
-                                  <label class="col-md-3 col-form-label" for="text-input">Google:</label>
-                                  <div class="col-md-9">
-                                    <input class="form-control" id="text-input" type="text" name="text-input" placeholder="Google">
-                                  </div>
-                                </div>
-                                <div class="form-group row">
-                                  <label class="col-md-3 col-form-label" for="email-input">Facebook:</label>
-                                  <div class="col-md-9">
-                                    <input class="form-control" id="text-input" type="text" name="text-input" placeholder="Facebook Profile">
-                                  </div>
-                                </div>
-                                  <div class="form-group row">
-                                  <label class="col-md-3 col-form-label" for="textarea-input">Twitter:</label>
-                                  <div class="col-md-9">
-                                    <input class="form-control" id="text-input" type="text" name="text-input" placeholder="Twitter Profile">
-                                  </div>
-                                </div>
-                              </form>
-                            </div>
-                            <div class="card-body">
-                              <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
-                                <div class="form-group row">
-                                  <div class="col-md-9">
-                                    <button class="btn btn-sm btn-primary" type="Cancel">Google</button>
-                                  </div>
-                                </div>
-                                <div class="form-group row">
-                                  
-                                  <div class="col-md-9">
-                                    <button class="btn btn-sm btn-primary" type="Cancel">Facebook</button>
-                                  </div>
-                                </div>
-                                  <div class="form-group row">
-                                  
-                                  <div class="col-md-9">
-                                    <button class="btn btn-sm btn-primary" type="Cancel">Twitter</button>
-                                  </div>
-                                </div>
-                              </form>
-                            </div>
-                          </div>
-                        </div>
-                        </div>
-                      </div>
+                    </div>
+                
                       <div class="card-footer">
-                        <button class="btn btn-sm btn-primary" type="Cancel">submit</button>
-                        <button class="btn btn-sm btn-danger" type="Preview">reset</button>
+                        <button class="btn btn-sm btn-primary" type="Cancel">Update</button>
+                        <button class="btn btn-sm btn-danger" type="Preview">Remove</button>
                       </div>
                     </div> 
                   </div>
