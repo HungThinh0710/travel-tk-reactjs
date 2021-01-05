@@ -12,6 +12,6 @@ class Tour extends Model
 
     public function members()
     {
-        return $this->belongsToMany('App\User','tour_member', 'tour_id', 'member_id');
+        return $this->belongsToMany('App\User','book_tours', 'tour_id', 'member_id');
     }
 }

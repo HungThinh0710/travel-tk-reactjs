@@ -39,6 +39,6 @@ class User extends Authenticatable
 
     public function tours()
     {
-        return $this->belongsToMany('App\Tour', 'tour_member', 'member_id', 'tour_id');
+        return $this->belongsToMany('App\Tour', 'book_tours', 'member_id', 'tour_id');
     }
 }
