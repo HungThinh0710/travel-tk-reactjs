@@ -19,9 +19,9 @@ class CreateBookToursTable extends Migration
             $table->foreign('tour_id')->references('id')->on('tour');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->integer('status');
+            $table->string('status');
             $table->integer('is_paid');
-            $table->string('notes');
+            $table->string('notes')->nullable();
             $table->timestamps();
         });
     }

@@ -8,15 +8,16 @@ class Staff extends Model
 {
     protected $table ='staff';
 
-    protected $fillable = ['username', 'email', 'password', 'socials_url', 'roles'];
+    protected $fillable = ['username', 'email', 'password', 'socials_url', 'role_id'];
 
     public function news()
     {
         return $this->hasMany('App\News', 'author_id', 'id');
     }
 
-    public function roles()
+    public function role()
     {
-        return $this->hasOne('App\Role','id', 'roles');
+        return $this->belongsTo('App\Role', 'role_id', 'id');
     }
+
 }

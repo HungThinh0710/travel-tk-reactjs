@@ -10,6 +10,11 @@ class News extends Model
 
     protected $fillable = ['title', 'content', 'tags'];
 
+    public function category()
+    {
+        return $this->belongsTo('App\Category','id');
+    }
+
     public function author()
     {
         return $this->belongsTo('App\Staff', 'id');

@@ -18,9 +18,9 @@ class CreateStaffTable extends Migration
             $table->string('username');
             $table->string('email');
             $table->string('password');
-            $table->string('socials_url');
-            $table->unsignedBigInteger('roles');
-            $table->foreign('roles')->references('id')->on('roles');
+            $table->string('socials_url')->nullable();
+            $table->unsignedBigInteger('role_id');
+            $table->foreign('role_id')->references('id')->on('roles');
             $table->timestamps();
         });
     }

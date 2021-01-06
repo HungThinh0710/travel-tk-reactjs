@@ -16,7 +16,7 @@ class TourTable extends Migration
         Schema::create('tour', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('desc');
+            $table->string('desc')->nullable();
             $table->string('price');
             $table->string('address');
             $table->string('status');
@@ -24,10 +24,7 @@ class TourTable extends Migration
             $table->string('end_time');
             $table->string('types');
             $table->string('services');
-            $table->string('imgs_path');
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('imgs_path')->nullable();
             $table->timestamps();
         });
     }
