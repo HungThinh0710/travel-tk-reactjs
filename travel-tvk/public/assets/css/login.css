@@ -1,0 +1,109 @@
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+    .content .login-form {
+        width: 100%!important;
+        padding: 15px 25px!important;
+
+    }
+}
+
+.content{
+    padding-top: 40px;
+}
+
+.content .login-form{
+    width: 30%;
+    background-color: white;
+    margin: 0 auto;
+    padding: 15px 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* text-align: center; */
+    border-radius: 5px;
+}
+
+.login-form .back-btn:hover{
+    margin-left: 2px;
+}
+
+.login-form .content-form {
+    padding: 15px 0;
+}
+
+.content-form .form-group .input-item{
+    border-radius: 30px!important;    
+    font-size: 13px
+}
+
+.login-btn{
+    display: inline-block;
+    background-color: #F34E3A;
+    color: white;
+    font-weight: bold;
+    padding: 7px 0;
+    width: 70%;
+    border-radius: 25px;
+    font-size: 18px;
+}
+
+.login-btn:hover{
+    color: white;
+    text-decoration: none;
+    background-color: #fa351f;
+
+}
+
+.or-group {
+    display: flex;
+    height: 15px;
+    /* background-color: lightblue; */
+}
+.or-group .hr-bar{
+    float: left;
+    height: 0.5px;
+    width: 40%;
+    background-color: #C7C7C7;
+    vertical-align: middle;
+    /* margin-top: 7px; */
+    margin: auto;
+}
+
+.or-group .or-text{
+    font-size: 10px;
+    float: left;
+    color: #616161;
+    margin: auto;
+}
+
+.social-btn{
+    transition: all ease 0.2s;
+    cursor: pointer;
+    display: inline-block;
+    color: black;
+    font-weight: bold;
+    padding: 7px 0;
+    width: 45%;
+    border-radius: 25px;
+    font-size: 13px;
+    background-color: transparent;
+    border: 0.5px solid #c7ccc7;
+}
+
+.social-btn:hover{
+    font-weight: bold;
+    color: #F34E3A;
+}
+
+.registration-group{
+    font-size: 13.8px;
+}
+
+.registration-group a {
+    text-decoration: none;
+    color: #F34E3A;
+}
+
+.registration-group a:hover{
+    font-weight: bold;
+}
+
