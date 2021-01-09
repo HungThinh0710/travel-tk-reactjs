@@ -53,9 +53,7 @@
   <body class="c-app">
     <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-lg-show" id="sidebar">
       <div class="c-sidebar-brand d-lg-down-none">
-        <svg class="c-sidebar-brand-full" width="118" height="46" alt="CoreUI Logo">
-          <use xlink:href="assets/brand/coreui.svg#full"></use>
-        </svg>
+        <img src="assets/img/logo-img.png" alt="">
         <svg class="c-sidebar-brand-minimized" width="46" height="46" alt="CoreUI Logo">
           <use xlink:href="assets/brand/coreui.svg#signet"></use>
         </svg>
@@ -63,36 +61,33 @@
       <ul class="c-sidebar-nav">
         <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="index.html">
             <svg class="c-sidebar-nav-icon">
-              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
+              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bank"></use>
             </svg> Dashboard<span class="badge badge-info">NEW</span></a></li>
         <li class="c-sidebar-nav-title">TOUR MANAGEMENT</li>
         <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
             <svg class="c-sidebar-nav-icon">
-              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
+              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bank"></use>
             </svg> Tour</a>
           <ul class="c-sidebar-nav-dropdown-items">
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="listour.html"><span class="c-sidebar-nav-icon"></span>List tours</a></li>
-            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="base/breadcrumb.html"><span class="c-sidebar-nav-icon"></span>Add tour</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="addtour.html"><span class="c-sidebar-nav-icon"></span>Add tour</a></li>
           </ul>
         </li>
         <li class="c-sidebar-nav-title">NEWS MANAGEMENT</li>
         <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
             <svg class="c-sidebar-nav-icon">
-              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
+              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-book"></use>
             </svg> News</a>
           <ul class="c-sidebar-nav-dropdown-items">
-            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="buttons/buttons.html"><span class="c-sidebar-nav-icon"></span>List news</a></li>
+            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="listnews.html"><span class="c-sidebar-nav-icon"></span>List news</a></li>
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="buttons/buttons.html"><span class="c-sidebar-nav-icon"></span>Add news</a></li>
-            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="buttons/buttons.html"><span class="c-sidebar-nav-icon"></span> Buttons</a></li>
-            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="buttons/button-group.html"><span class="c-sidebar-nav-icon"></span> Buttons Group</a></li>
-            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="buttons/dropdowns.html"><span class="c-sidebar-nav-icon"></span> Dropdowns</a></li>
-            <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="buttons/brand-buttons.html"><span class="c-sidebar-nav-icon"></span> Brand Buttons</a></li>
+           
           </ul>
         </li>
         <li class="c-sidebar-nav-title">OTHERS</li>
         <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
             <svg class="c-sidebar-nav-icon">
-              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-star"></use>
+              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-group"></use>
             </svg> Customers</a>
           <ul class="c-sidebar-nav-dropdown-items">
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="icons/coreui-icons-brand.html">List customers</a></li>
@@ -101,7 +96,7 @@
         </li>
         <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
             <svg class="c-sidebar-nav-icon">
-              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
+              <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-wallet"></use>
             </svg>Promotions</a>
           <ul class="c-sidebar-nav-dropdown-items">
             <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="notifications/alerts.html"><span class="c-sidebar-nav-icon"></span> List Promotions</a></li>
@@ -141,7 +136,7 @@
               <div class="c-avatar"><img class="c-avatar-img" src="assets/img/avatars/6.jpg" alt="user@email.com"></div>
             </a>
             <div class="dropdown-menu dropdown-menu-right pt-0">
-              <div class="dropdown-header bg-light py-2"><strong>Account</strong></div><a class="dropdown-item" href="#">
+              <div class="dropdown-header bg-light py-2"><strong>Account</strong></div><a class="dropdown-item" href="admin-profile.html">
                 <svg class="c-icon mr-2">
                   <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
                 </svg> Profile</a><a class="dropdown-item" href="#">
@@ -158,21 +153,118 @@
           <!-- Breadcrumb-->
           <ol class="breadcrumb border-0 m-0">
             <li class="breadcrumb-item">Home</li>
-            <li class="breadcrumb-item"><a href="#">Admin</a></li>
-            <li class="breadcrumb-item active">Dashboard</li>
+            <li class="breadcrumb-item"><a href="#">Tour</a></li>
+            <li class="breadcrumb-item active">Add tour</li>
             <!-- Breadcrumb Menu-->
           </ol>
         </div>
       </header>
       <div class="c-body">
         <main class="c-main">
-          <div class="container-fluid">
-            <div class="fade-in"></div>
-            
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h4 class="card-title mb-0">Add tour</h4>
+              </div>
+            </div>
           </div>
+          <div class="row">
+            <div class="card-body">
+              <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label" for="text-input">Title:</label>
+                  <div class="col-md-9">
+                    <input class="form-control" id="text-input" type="text" name="text-input" placeholder="Title">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label" for="email-input">Price:</label>
+                  <div class="col-md-9">
+                    <input class="form-control" id="email-input" type="email" name="email-input" placeholder="Price" autocomplete="email">
+                  </div>
+                </div>
+                  <div class="form-group row">
+                  <label class="col-md-3 col-form-label">Type:</label>
+                  <div class="col-md-9 col-form-label">
+                    <div class="form-check form-check-inline mr-1">
+                      <input class="form-check-input" id="inline-radio1" type="radio" value="option1" name="inline-radios">
+                      <label class="form-check-label" for="inline-radio1">Bình dân</label>
+                    </div>
+                    <div class="form-check form-check-inline mr-1">
+                      <input class="form-check-input" id="inline-radio2" type="radio" value="option2" name="inline-radios">
+                      <label class="form-check-label" for="inline-radio2">5 sao</label>
+                    </div>
+                    <div class="form-check form-check-inline mr-1">
+                      <input class="form-check-input" id="inline-radio3" type="radio" value="option3" name="inline-radios">
+                      <label class="form-check-label" for="inline-radio3">Cao cấp</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label">Services:</label>
+                  <div class="col-md-9 col-form-label">
+                    <div class="form-check form-check-inline mr-1">
+                      <input class="form-check-input" id="inline-checkbox1" type="checkbox" value="check1">
+                      <label class="form-check-label" for="inline-checkbox1">Full Options</label>
+                    </div>
+                    <div class="form-check form-check-inline mr-1">
+                      <input class="form-check-input" id="inline-checkbox2" type="checkbox" value="check2">
+                      <label class="form-check-label" for="inline-checkbox2">Nước uống</label>
+                    </div>
+                    <div class="form-check form-check-inline mr-1">
+                      <input class="form-check-input" id="inline-checkbox3" type="checkbox" value="check3">
+                      <label class="form-check-label" for="inline-checkbox3">Vé khứ hồi</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label"></label>
+                  <div class="col-md-9 col-form-label">
+                    <div class="form-check form-check-inline mr-1">
+                      <input class="form-check-input" id="inline-checkbox1" type="checkbox" value="check1">
+                      <label class="form-check-label" for="inline-checkbox1">Thức ăn</label>
+                    </div>
+                    <div class="form-check form-check-inline mr-1">
+                      <input class="form-check-input" id="inline-checkbox2" type="checkbox" value="check2">
+                      <label class="form-check-label" for="inline-checkbox2">Đặt khách sạn</label>
+                    </div>
+                    <div class="form-check form-check-inline mr-1">
+                      <input class="form-check-input" id="inline-checkbox3" type="checkbox" value="check3">
+                      <label class="form-check-label" for="inline-checkbox3">Hỗ trợ người khuyết tật</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label" for="textarea-input">Description:</label>
+                  <div class="col-md-9">
+                    <textarea class="form-control" id="textarea-input" name="textarea-input" rows="9" placeholder="Content.."></textarea>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label" for="file-input">Image:</label>
+                  <div class="col-md-9">
+                    <input id="file-input" type="file" name="file-input">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label" for="file-multiple-input">Multiple Images: </label>
+                  <div class="col-md-9">
+                    <input id="file-multiple-input" type="file" name="file-multiple-input" multiple="">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-lg btn-danger" type="Cancel">Cancel</button>
+            <button class="btn btn-lg btn-warning" type="Preview"> Preview</button>
+            <button class="btn btn-lg btn-success" type="Submit"> Submit</button>
+          </div>
+        </div>
         </main>
         <footer class="c-footer">
-          <div><a href="#">CoreUI</a>© 2020 4th Group VKU.</div>
+          <div><a href="#"></a> © 2020 4th Group VKU.</div>
           <div class="ml-auto">Powered by&nbsp;<a href="#">4th Group VKU</a></div>
         </footer>
       </div>
