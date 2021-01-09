@@ -1,14 +1,18 @@
 <html>
-    <head>
+<head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Homepage</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="./assets/css/destination.css">
         <link rel="stylesheet" href="./assets/css/styles.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/074453e228.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
+        <script src="js/jquery-1.11.1.min.js"></script>
+        
+</head>
+<body>
          <!-- Navigation Bar -->
     <nav class="c-navigation d-flex justify-content-around">
         <div class="logo-box">
@@ -28,23 +32,196 @@
             </svg>
         </a>
     </nav>
-<<<<<<< Updated upstream
-    
-=======
-    <div class= (welcome-tile)>
-        <div class="images-tile">
-            <img src="./assets/images/news-title.svg" alt="">
-        </div>
-        <div class="welcome-text ">
-            <h2>ĐỊA ĐIỂM DU LỊCH</h2>
-        </div>
-    </div>
-    <div class="search-tour">
-        <button>search-tour</button>
-    </div>
-    <div class="main-content">
 
+    <div class="welcome-title ">
+        <div class="img-title">
+            <img src="./assets/images/news-title.svg" alt="news title">
+        </div>
+        <div class="welcome-text text-center">
+            <h2>Địa Điểm Du Lịch
+            </h2>
+        </div>
     </div>
+   
+    <div class="filter-search-group pt-5">
+        <span class="border-form">
+            <select id="typeTour">
+                <option>Du lịch với giá cả phải chăng</option>
+                <option>Du lịch với giá cả phải chăng</option>
+                <option>Du lịch với giá cả phải chăng</option>
+                <option>Du lịch với giá cả phải chăng</option>
+                <option>Du lịch với giá cả phải chăng</option>
+            </select>
+            <div class="text-search">
+                <input type="text" name="provine" value="Đà Nẵng" id="">
+                <div class="icon">
+                    <a href="#" style="text-decoration: none; color: #F34E3A"><i
+                            class="fas fa-times"></i></a>
+                </div>
+            </div>
+            <button><i class="fas fa-search"></i> Search </button>
+
+
+        </span>
+    </div>
+    <br> 
+    <div class="main-content container">
+        <h2 class="destination-title-content font-weight-bold" >Địa điểm du lịch</h2>
+    
+    <br>
+    <div class="row">
+        <div class="col-sm-1">
+            <div class="nav flex-column nav-pills title-slide-group" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+                    aria-controls="v-pills-home" aria-selected="true">TẤT CẢ</a>
+            </div>
+        </div> 
+        <div class="col-sm-2">
+            <div class="nav flex-column nav-pills title-slide-group" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+                    aria-controls="v-pills-profile" aria-selected="false">PHỔ BIẾN</a>
+            </div>        
+        </div>  
+        <div class="col-sm-2">  
+            <div class="nav flex-column nav-pills title-slide-group" id="v-pills-tab" role="tablist" aria-orientation="vertical">     
+                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+                    aria-controls="v-pills-messages" aria-selected="false">ĐẶC SẮC</a>
+            </div>        
+        </div>
+        <div class="col-sm-2">
+            <div class="nav flex-column nav-pills title-slide-group" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+                    aria-controls="v-pills-settings" aria-selected="false">CHI PHÍ THẤP</a>
+            </div>        
+        </div>            
+    </div>
+    <br>
+    <div>
+        <div id="tour" class="row "> 
+            <div class="item  col-xs-3 col-lg-3"> 
+             <div class="thumbnail"> <img class="group list-group-image" src="https://danangfantasticity.com/wp-content/uploads/2020/03/da-nang-khong-to-chuc-le-ky-niem-45-nam-ngay-giai-phong.jpg" alt="Sản phẩm 1" width="300"> 
+              <div class="caption"> 
+               <h4 class="group inner list-group-item-heading"> Đà Nẵng</h4> 
+               <p class="group inner list-group-item-text"> Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p> 
+               <div class="row"> 
+                <div class="col-xs-12 col-md-6"> 
+                 <p class="lead"> 900.000 đ</p> 
+                </div> 
+                <div class="col-xs-12 col-md-6"> <a class="btn btn-success" href="#">Chi tiết</a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="item  col-xs-3 col-lg-3"> 
+             <div class="thumbnail"> <img class="group list-group-image" src="https://danangfantasticity.com/wp-content/uploads/2020/03/da-nang-khong-to-chuc-le-ky-niem-45-nam-ngay-giai-phong.jpg" alt="Sản phẩm 2" width="300"> 
+              <div class="caption"> 
+               <h4 class="group inner list-group-item-heading">Hội An </h4> 
+               <p class="group inner list-group-item-text"> Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p> 
+               <div class="row"> 
+                <div class="col-xs-12 col-md-6"> 
+                 <p class="lead"> 200.000 đ</p> 
+                </div> 
+                <div class="col-xs-12 col-md-6"> <a class="btn btn-success" href="#">Chi tiết</a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="item  col-xs-3 col-lg-3"> 
+             <div class="thumbnail"> <img class="group list-group-image" src="https://danangfantasticity.com/wp-content/uploads/2020/03/da-nang-khong-to-chuc-le-ky-niem-45-nam-ngay-giai-phong.jpg" alt="Sản phẩm 3" width="300"> 
+              <div class="caption"> 
+               <h4 class="group inner list-group-item-heading"> Đà Nẵng</h4> 
+               <p class="group inner list-group-item-text"> Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p> 
+               <div class="row"> 
+                <div class="col-xs-12 col-md-6"> 
+                 <p class="lead"> 200.000 đ</p> 
+                </div> 
+                <div class="col-xs-12 col-md-6"> <a class="btn btn-success" href="#">Chi tiết</a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="item  col-xs-3 col-lg-3"> 
+             <div class="thumbnail"> <img class="group list-group-image" src="https://danangfantasticity.com/wp-content/uploads/2020/03/da-nang-khong-to-chuc-le-ky-niem-45-nam-ngay-giai-phong.jpg" alt="Sản phẩm 4" width="300"> 
+              <div class="caption"> 
+               <h4 class="group inner list-group-item-heading"> Đà Nẵng</h4> 
+               <p class="group inner list-group-item-text"> Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,  sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p> 
+               <div class="row"> 
+                <div class="col-xs-12 col-md-6"> 
+                 <p class="lead"> 200.000 đ</p> 
+                </div> 
+                <div class="col-xs-12 col-md-6"> <a class="btn btn-success" href="#">Chi tiết</a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="item  col-xs-3 col-lg-3"> 
+             <div class="thumbnail"> <img class="group list-group-image" src="https://danangfantasticity.com/wp-content/uploads/2020/03/da-nang-khong-to-chuc-le-ky-niem-45-nam-ngay-giai-phong.jpg" alt="Sản phẩm 5" width="300"> 
+              <div class="caption"> 
+               <h4 class="group inner list-group-item-heading"> Đà Nẵng</h4> 
+               <p class="group inner list-group-item-text"> Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,  sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p> 
+               <div class="row"> 
+                <div class="col-xs-12 col-md-6"> 
+                 <p class="lead"> 200.000 đ</p> 
+                </div> 
+                <div class="col-xs-12 col-md-6"> <a class="btn btn-success" href="#">Chi tiết</a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="item  col-xs-3 col-lg-3"> 
+             <div class="thumbnail"> <img class="group list-group-image" src="https://danangfantasticity.com/wp-content/uploads/2020/03/da-nang-khong-to-chuc-le-ky-niem-45-nam-ngay-giai-phong.jpg" alt="Sản phẩm 6" width="300"> 
+              <div class="caption"> 
+               <h4 class="group inner list-group-item-heading"> Đà Nẵng</h4> 
+               <p class="group inner list-group-item-text"> Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p> 
+               <div class="row"> 
+                <div class="col-xs-12 col-md-6"> 
+                 <p class="lead">200.000 đ</p> 
+                </div> 
+                <div class="col-xs-12 col-md-6"> <a class="btn btn-success" href="#">Chi tiết</a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="item  col-xs-3 col-lg-3"> 
+             <div class="thumbnail"> <img class="group list-group-image" src="https://danangfantasticity.com/wp-content/uploads/2020/03/da-nang-khong-to-chuc-le-ky-niem-45-nam-ngay-giai-phong.jpg" alt="Sản phẩm 7" width="300"> 
+              <div class="caption"> 
+               <h4 class="group inner list-group-item-heading"> Đà Nẵng</h4> 
+               <p class="group inner list-group-item-text"> Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p> 
+               <div class="row"> 
+                <div class="col-xs-12 col-md-6"> 
+                 <p class="lead">200.000 đ</p> 
+                </div> 
+                <div class="col-xs-12 col-md-6"> <a class="btn btn-success" href="#">Chi tiết</a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="item  col-xs-3 col-lg-3"> 
+             <div class="thumbnail"> <img class="group list-group-image" src="https://danangfantasticity.com/wp-content/uploads/2020/03/da-nang-khong-to-chuc-le-ky-niem-45-nam-ngay-giai-phong.jpg" alt="Sản phẩm 8" width="300"> 
+              <div class="caption"> 
+               <h4 class="group inner list-group-item-heading"> Hội An</h4> 
+               <p class="group inner list-group-item-text"> Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p> 
+               <div class="row"> 
+                <div class="col-xs-12 col-md-6"> 
+                 <p class="lead">200.000 đ</p> 
+                </div> 
+                <div class="col-xs-12 col-md-6"> <a class="btn btn-success" href="#">Chi tiết</a> 
+                </div> 
+               </div> 
+              </div> 
+             </div> 
+            </div> 
+           </div>  
+    </div>
+    </div>
+
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -113,7 +290,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
->>>>>>> Stashed changes
 
-    </body>
+
+</body>
 </html>
