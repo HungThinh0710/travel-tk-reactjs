@@ -15,7 +15,7 @@
     <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
-    <title>CoreUI Free Bootstrap Admin Template</title>
+    <title>TVK Travel Dashboard</title>
     <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
@@ -185,14 +185,32 @@
                       <p>Created Date:10/11/2020 </p>
                       <p>Role: Administrator</p>
                      </div>
-                     <div class=" card">
-                      <button class="btn btn-sm btn-primary" type="Edit">Google</button>
-                     </div>
-                     <div class="card">
-                       <button class="btn btn-sm btn-primary" type="Delete">Facebook</button>
+                     <div class="btn toolbar"> 
+                      <div class="text-center">
+                        <button class="mb-2 btn btn-sm btn-youtube" type="button">
+                          <svg class="c-icon mr-2">
+                            <use xlink:href="vendors/@coreui/icons/svg/brand.svg#cib-google"></use>
+                          </svg><span>&nbsp;&nbsp;&nbsp;Google</span>
+                        </button>
                       </div>
-                      <div class="card">
-                        <button class="btn btn-sm btn-primary" type="Edit"> Twitter</button>
+                      
+                    
+                      <div class="text-center">
+                        <button class=" mb-2 btn btn-sm btn-facebook" type="button">
+                          <svg class="c-icon mr-2">
+                            <use xlink:href="vendors/@coreui/icons/svg/brand.svg#cib-facebook-f"></use>
+                          </svg><span>Facebook</span>
+                        </button>
+                      </div>
+                      
+                     
+                        <div class="text-center">
+                          <button class="mb-2 btn btn-sm btn-twitter" type="button">
+                            <svg class="c-icon mr-2">
+                              <use xlink:href="vendors/@coreui/icons/svg/brand.svg#cib-twitter"></use>
+                            </svg><span>&nbsp;&nbsp;&nbsp;&nbsp;Twitter</span>
+                          </button>
+                        </div>
                       </div>
                       
                     </div>
@@ -206,7 +224,7 @@
                           <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#messages" role="tab" aria-controls="messages">Social account</a></li>
                         </ul>
                         <div class="tab-content">
-                          <div class="tab-pane active" id="general" role="tabpanel">
+                          <div class="tab-pane active" id="home" role="tabpanel">
                             <div class="row">
                               <div class="card-body">
                                 <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
@@ -259,6 +277,13 @@
                                 </form>
                               </div>
                             </div>
+                           
+                            <div class="card">
+                              <div class="card-footer">
+                                <button class="btn btn-sm btn-primary" type="Cancel">submit</button>
+                                <button class="btn btn-sm btn-danger" type="Preview">reset</button>
+                              </div>
+                            </div>
                           </div>
                           <div class="tab-pane" id="profile" role="tabpanel"><div class="row">
                             <div class="card-body">
@@ -282,6 +307,12 @@
                                   </div>
                                 </div>
                               </form>
+                            </div>
+                          </div>
+                          <div class="card">
+                            <div class="card-footer">
+                              <button class="btn btn-sm btn-primary" type="Cancel">Change Password</button>
+                              <button class="btn btn-sm btn-danger" type="Preview">reset</button>
                             </div>
                           </div>
                         </div>
@@ -312,31 +343,46 @@
                               <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
                                 <div class="form-group row">
                                   <div class="col-md-9">
-                                    <button class="btn btn-sm btn-primary" type="Cancel">Google</button>
+                                    <button class="mb-2 btn btn-sm btn-youtube" type="button">
+                                      <svg class="c-icon mr-2">
+                                        <use xlink:href="vendors/@coreui/icons/svg/brand.svg#cib-google"></use>
+                                      </svg><span>&nbsp;&nbsp;&nbsp;Google</span>
+                                    </button>
                                   </div>
                                 </div>
                                 <div class="form-group row">
                                   
                                   <div class="col-md-9">
-                                    <button class="btn btn-sm btn-primary" type="Cancel">Facebook</button>
+                                    <button class=" mb-2 btn btn-sm btn-facebook" type="button">
+                                      <svg class="c-icon mr-2">
+                                        <use xlink:href="vendors/@coreui/icons/svg/brand.svg#cib-facebook-f"></use>
+                                      </svg><span>Facebook</span>
+                                    </button>
                                   </div>
                                 </div>
                                   <div class="form-group row">
                                   
                                   <div class="col-md-9">
-                                    <button class="btn btn-sm btn-primary" type="Cancel">Twitter</button>
+                                    <button class="mb-2 btn btn-sm btn-twitter" type="button">
+                                      <svg class="c-icon mr-2">
+                                        <use xlink:href="vendors/@coreui/icons/svg/brand.svg#cib-twitter"></use>
+                                      </svg><span>&nbsp;&nbsp;&nbsp;&nbsp;Twitter</span>
+                                    </button>
                                   </div>
                                 </div>
                               </form>
                             </div>
                           </div>
+                          <div class="card">
+                            <div class="card-footer">
+                              <button class="btn btn-sm btn-primary" type="Cancel">submit</button>
+                              <button class="btn btn-sm btn-danger" type="Preview">reset</button>
+                            </div>
+                          </div>
                         </div>
                         </div>
                       </div>
-                      <div class="card-footer">
-                        <button class="btn btn-sm btn-primary" type="Cancel">submit</button>
-                        <button class="btn btn-sm btn-danger" type="Preview">reset</button>
-                      </div>
+                      
                     </div> 
                   </div>
                 </div> 
