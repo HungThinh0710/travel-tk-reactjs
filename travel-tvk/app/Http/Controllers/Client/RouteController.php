@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class RouteController extends Controller
 {
@@ -29,6 +30,12 @@ class RouteController extends Controller
 
     public function login()
     {
-        return view('client.login');
+        if(Auth::check()) return redirect(route('show_profile'));
+        else return view('client.login');
+    }
+
+    public function profile()
+    {
+        return view('client.profile');
     }
 }

@@ -4,6 +4,8 @@ namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Auth\AuthenticationException;
+use Auth;
 
 class Handler extends ExceptionHandler
 {
@@ -25,6 +27,26 @@ class Handler extends ExceptionHandler
         'password',
         'password_confirmation',
     ];
+
+    /**
+     * Handle return throw redirect with middleware
+     *
+     * @param \Illuminate\Http\Request $request
+     * @param AuthenticationException $exception
+     */
+
+    protected function unauthenticated($request, AuthenticationException $exception)
+    {
+        if ($request->expectsJson()) {
+            return response()->json(['error' => 'Unauthenticated.'], 401);
+        }
+        if ($request->is('admincp') || $request->is('admincp/*')) {
+            return redirect()->guest(route('show_sys_login'));
+        }
+
+        return redirect()->guest(route('login'));
+    }
+
 
     /**
      * Report or log an exception.
