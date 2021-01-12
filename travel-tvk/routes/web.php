@@ -46,8 +46,14 @@ Route::group(['prefix' => 'admincp'], function () {
     Route::group(['middleware' => 'auth:admin'], function (){
         Route::get('/', 'Dashboard\\RouteNavigationController@dashboard')->name('show_dashboard');
         Route::get('/home', 'Dashboard\\RouteNavigationController@dashboard')->name('show_dashboard');
+
+        /*
+         * Tour
+         */
         Route::get('/tours', 'Dashboard\\RouteNavigationController@listTour')->name('show_list_tours');
         Route::get('/add-tour', 'Dashboard\\RouteNavigationController@addTour')->name('show_add_tour');
+        Route::get('/tours-ajax', 'Dashboard\\TourController@listTour')->name('sys_ajax_list_tour');
+        Route::post('/add-tour', 'Dashboard\\TourController@addTour')->name('sys_add_tour');
 
     });
 });
