@@ -20,6 +20,12 @@ class CreateBookToursTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('status');
+            $table->tinyInteger('isUserOwnInfo');
+            $table->string('fullname')->nullable();
+            $table->string('gender')->nullable();
+            $table->date('dob')->nullable();
+            $table->string('email')->nullable();
+            $table->string('cmnd')->nullable();
             $table->integer('is_paid');
             $table->string('notes')->nullable();
             $table->timestamps();

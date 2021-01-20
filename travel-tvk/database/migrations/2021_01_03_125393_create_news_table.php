@@ -19,7 +19,7 @@ class CreateNewsTable extends Migration
             $table->foreign('category_id')->references('id')->on('categories');
             $table->string('title');
             $table->longText('content');
-            $table->string('tags');
+            $table->string('tags')->nullable();
             $table->unsignedBigInteger('author_id');
             $table->foreign('author_id')->references('id')->on('staff');
             $table->timestamps();

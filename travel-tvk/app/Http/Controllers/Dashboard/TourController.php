@@ -20,8 +20,8 @@ class TourController extends Controller
     public function listTour(Request $request)
     {
         if($request->ajax()){
-        }
             $tours = Tour::all();
             return response(['data' => $tours]);
+        }
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+use App\Category;
 use App\Http\Controllers\Controller;
 use App\Tour;
 use Illuminate\Http\Request;
@@ -31,5 +32,16 @@ class RouteNavigationController extends Controller
     public function addTour()
     {
         return view('dashboard.tours.add-tour');
+    }
+
+    public function listNews()
+    {
+        return view('dashboard.news.list-news');
+    }
+
+    public function addNews()
+    {
+        $categories = Category::all();
+        return view('dashboard.news.add-news_s1', compact('categories'));
     }
 }

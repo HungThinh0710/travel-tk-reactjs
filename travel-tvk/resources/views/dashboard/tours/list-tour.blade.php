@@ -20,7 +20,7 @@
             //Initial search
             $('#list-tour-table tfoot th').each( function () {
                 var title = $(this).text();
-                $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+                $(this).html( '<input type="text" placeholder="Search '+title+'" class="form-control form-control-sm" />' );
             } );
 
             var table = $('#list-tour-table').DataTable( {
