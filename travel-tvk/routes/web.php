@@ -27,7 +27,8 @@ Route::post('/checkout/payment', 'Client\\CheckoutController@showPayment')->name
 
 //PAYPAL
 Route::get('/checkout/payment/paypal', 'Client\\CheckoutController@executePaymentPaypal')->name('execute_paypal');
-Route::get('/checkout/payment/handle-paypal', 'Client\\CheckoutController@paymentSuccess')->name('success.payment');
+Route::get('/checkout/payment/success-payment/{invoiceId}', 'Client\\CheckoutController@paymentSuccess')->name('success.payment');
+Route::get('/checkout/payment/failed-payment/{invoiceId}', 'Client\\CheckoutController@paymentSuccess')->name('failed.payment');
 Route::get('/checkout/payment/cancel-payment', 'Client\\CheckoutController@cancelPayment')->name('cancel.payment');
 
 Route::get('/news', 'Client\\RouteController@news')->name('show_news');

@@ -33,53 +33,67 @@
                         </div>
                     </div>
                 </div>
-                <form class="content-tour" action="{{route('show_payment')}}" method="POST">
-                    <div class="row">
-                        <div class="form-group col-md-12 ">
-                            {{csrf_field()}}
-                            <button type="button" class=btn btn-primary center">Sử dụng thông tin tài khoản của tôi</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <label>Giới tính</label>
-                            <div>
-                                Nam <input type="radio" value="male" checked>
-                                Nữ <input type="radio" value="female">
-
+                <div class="content-tour container">
+                    <form action="{{route('show_payment')}}" method="POST">
+                        <div class="row justify-content-md-center" style="width: 90%;">
+                            <div class="col-md-auto pt-4">
+                                {{csrf_field()}}
+                                <input type="text" name="tour-id" value="{{$tour->id}}" hidden>
+                                <input type="text" name="isUserOwnInfo" value="1" hidden>
+                                <button type="submit" class="btn btn-core center">Sử dụng thông tin với tài khoản của tôi</button>
                             </div>
                         </div>
-                        <div class="form-group col-md-6">
-                            <label>Họ và Tên</label>
-                            <input class="form-control" type="text" name="fullname" value="Nguyễn Hưng Thịnh">
+                        <div class="row justify-content-md-center" style="width: 90%;">
+                            <div class="col-md-auto pt-4 pb-2">
+                                <h4>HOẶC</h4>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <label>Email</label>
-                            <input class="form-control" type="text" name="email" value="nhthinh.17it2@vku.udn.vn">
+                    </form>
+                    <hr/>
+                    <form action="{{route('show_payment')}}" method="POST">
+                        <input type="text" name="tour-id" value="{{$tour->id}}" hidden>
+                        {{csrf_field()}}
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label>Giới tính</label>
+                                <div>
+                                    Nam <input type="radio" value="male" checked>
+                                    Nữ <input type="radio" value="female">
+
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Họ và Tên</label>
+                                <input class="form-control" type="text" name="fullname" value="Nguyễn Hưng Thịnh">
+                            </div>
                         </div>
-                        <div class="form-group col-md-6">
-                            <label>Ngày sinh</label>
-                            <input class="form-control" type="date" name="dob" value="1999-10-07">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label>Email</label>
+                                <input class="form-control" type="text" name="email" value="nhthinh.17it2@vku.udn.vn">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Ngày sinh</label>
+                                <input class="form-control" type="date" name="dob" value="1999-10-07">
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-6">
-                            <label>Số CMND</label>
-                            <input class="form-control" type="number" name="cmnd" value="212577777">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label>Số CMND</label>
+                                <input class="form-control" type="number" name="cmnd" value="212577777">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Ghi chú</label>
+                                <input class="form-control" type="text" name="note" value="">
+                            </div>
                         </div>
-                        <div class="form-group col-md-6">
-                            <label>Ghi chú</label>
-                            <input class="form-control" type="text" name="note" value="">
+                        <hr>
+                        <div class="row justify-content-between" >
+                            <a href="#" class="">Quay lại</a>
+                            <button type="submit" class="main-color-text" style="background-color: transparent; border: none; cursor: pointer">Tiếp tục</button>
                         </div>
-                    </div>
-                    <hr>
-                    <div class="row justify-content-between">
-                        <a href="#" class="">Quay lại</a>
-                        <button type="submit" class="main-color-text" style="background-color: transparent; border: none; cursor: pointer">Tiếp tục</button>
-                    </div>
-                </form>
+                    </form>
+                </div>
 
 
             </div>

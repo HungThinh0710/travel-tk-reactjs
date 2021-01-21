@@ -28,6 +28,10 @@ class CreateBookToursTable extends Migration
             $table->string('cmnd')->nullable();
             $table->integer('is_paid');
             $table->string('notes')->nullable();
+            $table->string('tmp_invoice')->nullable();
+            $table->string('paypal_token')->nullable();
+            $table->string('paypal_payerid')->nullable();
+            $table->string('paypal_invoiceid')->nullable();
             $table->timestamps();
         });
     }

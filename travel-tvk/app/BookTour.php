@@ -8,7 +8,7 @@ class BookTour extends Model
 {
     protected $table = 'book_tours';
 
-    protected $fillable = ['tour_id', 'user_id', 'status', 'is_paid', 'notes'];
+    protected $fillable = ['tour_id', 'user_id', 'status', 'is_paid', 'notes','paypal_token','paypal_payerid', 'paypal_invoiceid', ];
 
 
 }

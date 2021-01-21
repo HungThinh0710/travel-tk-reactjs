@@ -24,35 +24,21 @@
                         <span>Thanh toán</span>
                         <div class="progress-group">
                             <div class="circle c-done"></div>
-                            <div class="step-item"></div>
+                            <div class="step-item active"></div>
                         </div>
                     </div>
                     <div class="step">
                         <span>Hoàn thành</span>
                         <div class="progress-group">
                             <div class="circle"></div>
-                            <!-- <div class="step-item"></div> -->
+{{--                            <div class="step-item"></div>--}}
                         </div>
                     </div>
                 </div>
                 <div class="content-tour">
-                    <div class="row">
-                        <div class="form-group col-md-12 pt-3">
-                            <label>Lựa chọn phương thức thanh toán</label>
-                            <div class="form-control">
-                                <input type="radio" checked>
-                                <img src="assets/images/paypal.png" width="25%">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <form action="{{route('execute_paypal')}}" method="GET">
-                                {{csrf_field()}}
-                                <input type="text" name="tour-id" value="{{$tour->id}}" hidden>
-                                <input type="text" name="invoice-id" value="{{$invoiceId}}" hidden>
-                                <button class="btn btn-core" style="width: 100%">Thanh toán</button>
-                            </form>
+                    <div class="row justify-content-md-center" style="width: 90%;">
+                        <div class="col-md-auto pt-5 pb-5">
+                            <p style="color: green;">THANH TOÁNH THÀNH CÔNG BẰNG PAYPAL</p>
                         </div>
 
                     </div>

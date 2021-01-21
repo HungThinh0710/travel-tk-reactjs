@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Client;
 
+use App\BookTour;
 use App\Http\Controllers\Controller;
 use App\Tour;
 use Illuminate\Http\Request;
@@ -14,7 +15,6 @@ class CheckoutController extends Controller
     public function __construct()
     {
         $this->provider = new ExpressCheckout;
-//        $this->provider = PayPal::setProvider('express_checkout');
 
     }
 
@@ -24,59 +24,101 @@ class CheckoutController extends Controller
         return view('client.book-tour', compact('tour'));
     }
 
-    public function checkout(Request $request)
+    public function getCart($tourId, $invoiceId)
     {
 
+        $tour = Tour::findOrFail($tourId);
+        $data = [];
+
+        $data['items'][] = [
+            'name' => $tour->name,
+            'price' => (int)$tour->price,
+            'desc'  => $tour->desc,
+            'qty' => 1
+        ];
+
+//        $data['invoice_id'] = $tourId+rand(10,100000);
+        $data['invoice_id'] = $invoiceId;
+        $data['invoice_description'] = "Order #{$data['invoice_id']} Invoice";
+        $data['return_url'] = route('success.payment', [$invoiceId]);
+        $data['cancel_url'] = route('cancel.payment', [$invoiceId]);
+
+        $total = 0;
+        foreach ($data['items'] as $item) {
+            $total += $item['price'] * $item['qty'];
+        }
+
+        $data['total'] = $total;
+        return $data;
     }
 
     public function showPayment(Request $request)
     {
-//        $dumpData = $request->only('fullname', '');
-        return view('client.payment');
+        if($request->has('isUserOwnInfo')){
+            $tourId = $request->input('tour-id');
+            $tour = Tour::findOrFail($tourId);
+
+            $invoiceId = $tourId+rand(10,100000);
+
+            $tour->members()->attach($tourId,
+                [
+                    'isUserOwnInfo' => 0,
+                    'status' => 'pending',
+                    'is_paid' => 0,
+                    'tmp_invoice' => $invoiceId,
+                ]);
+        }
+        else{
+            return 'blublu';
+        }
+
+        return view('client.payment', compact(['tour', 'invoiceId']));
     }
 
     public function executePaymentPaypal(Request $request)
     {
+        $tourId = $request->input('tour-id');
+        $invoiceId = $request->input('invoice-id');
 
-        $data = [];
-        $data['items'] = [
-            [
-                'name' => 'Product 1',
-                'price' => 9.99,
-                'desc'  => 'Description for product 1',
-                'qty' => 1
-            ],
-            [
-                'name' => 'Product 2',
-                'price' => 4.99,
-                'desc'  => 'Description for product 2',
-                'qty' => 2
-            ]
-        ];
 
-        $data['invoice_id'] = 1;
-        $data['invoice_description'] = "Order #{$data['invoice_id']} Invoice";
-        $data['return_url'] = url('/payment/success');
-        $data['cancel_url'] = url('/cart');
-
-        $total = 0;
-        foreach($data['items'] as $item) {
-            $total += $item['price']*$item['qty'];
-        }
-
-        $data['total'] = $total;
-
-        //give a discount of 10% of the order amount
-        $data['shipping_discount'] = round((10 / 100) * $total, 2);
-
-        $response = $this->provider->setExpressCheckout($data);
-        // This will redirect user to PayPal
+        $cart = $this->getCart($tourId, $invoiceId);
+        $response = $this->provider->setExpressCheckout($cart);
         return redirect($response['paypal_link']);
     }
 
-    public function paymentSuccess()
+    public function paymentSuccess(Request $request, $invoiceId)
     {
+        $token = $request->get('token');
+        $PayerID = $request->get('PayerID');
+//        $invoiceId = $request->get('invoiceId');
 
+
+        $bookTour = BookTour::where('tmp_invoice', $invoiceId)->first();
+        $data = $this->getCart($bookTour->tour_id, $invoiceId);
+
+        $response = $this->provider->getExpressCheckoutDetails($token);
+        if (in_array(strtoupper($response['ACK']), ['SUCCESS', 'SUCCESSWITHWARNING'])) {
+            // Perform transaction on PayPal
+            $payment_status = $this->provider->doExpressCheckoutPayment($data, $token, $PayerID);
+            $status = $payment_status['PAYMENTINFO_0_PAYMENTSTATUS'];
+
+            if (!strcasecmp($status, 'Completed') || !strcasecmp($status, 'Processed')) {
+                $bookTour->status = 'Active';
+                $bookTour->is_paid = 1;
+                $bookTour->paypal_token = $token;
+                $bookTour->paypal_payerid = $PayerID;
+                $bookTour->paypal_invoiceid = $invoiceId;
+
+            } else {
+                $bookTour->is_paid = 0;
+            }
+            $bookTour->save();
+            return view('client.payment-success');
+        }
+        else{
+            return 'failed';
+
+        }
     }
 
     public function cancelPayment()
