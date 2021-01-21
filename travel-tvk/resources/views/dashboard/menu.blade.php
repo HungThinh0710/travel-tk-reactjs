@@ -11,26 +11,15 @@
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bank"></use>
                 </svg> Dashboard<span class="badge badge-info"></span></a></li>
         <li class="c-sidebar-nav-title">TOUR MANAGEMENT</li>
-        <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{route('show_list_tours')}}">
                 <svg class="c-sidebar-nav-icon">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bank"></use>
-                </svg> Tour</a>
-            <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{route('show_list_tours')}}"><span class="c-sidebar-nav-icon"></span>List tours</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="addtour.html"><span class="c-sidebar-nav-icon"></span>Add tour</a></li>
-            </ul>
-        </li>
+                </svg> Tours<span class="badge badge-info"></span></a></li>
         <li class="c-sidebar-nav-title">NEWS MANAGEMENT</li>
-        <li class="c-sidebar-nav-item c-sidebar-nav-dropdown"><a class="c-sidebar-nav-link c-sidebar-nav-dropdown-toggle" href="#">
+        <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="{{route('show_list_news')}}">
                 <svg class="c-sidebar-nav-icon">
-                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-book"></use>
-                </svg> News</a>
-            <ul class="c-sidebar-nav-dropdown-items">
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="listnews.html"><span class="c-sidebar-nav-icon"></span>List news</a></li>
-                <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="addnew.html"><span class="c-sidebar-nav-icon"></span>Add news</a></li>
-
-            </ul>
-        </li>
+                    <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-bank"></use>
+                </svg> News<span class="badge badge-info"></span></a></li>
         <li class="c-sidebar-nav-title">OTHERS</li>
         <li class="c-sidebar-nav-dropdown"><a class="c-sidebar-nav-dropdown-toggle" href="#">
                 <svg class="c-sidebar-nav-icon">

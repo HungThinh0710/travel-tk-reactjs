@@ -192,3 +192,13 @@
 .text-color-black:hover{
     color: #F34E3A;
 }
+
+.btn-core{
+    background-color: #f34e3a;
+    color: white;
+    transition: all ease 0.2s;
+}
+
+.btn-core:hover{
+    background-color: #ee1f06 !important;
+}

@@ -41,5 +41,25 @@
 
 .progress-group .active {
     background-color: #F34E3A;
+}
 
+.image-tour{
+    align-items: center;
+}
+
+.image-tour img{
+    height: 80%;
+    width: 100%;
+
+}
+
+.tour-right{
+   /*background-color: red;*/
+   /* width: 80%;*/
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.content-tour{
+    width: 95%;
 }

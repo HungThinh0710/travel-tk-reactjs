@@ -35,7 +35,10 @@
     <meta name="theme-color" content="#ffffff">
     <!-- Main styles for this application-->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <link href="toast/toastr.min.css" rel="stylesheet" type="text/css"/>
+    @stack('css')
+
+<!-- Global site tag (gtag.js) - Google Analytics-->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -68,6 +71,47 @@
 <script src="vendors/@coreui/chartjs/js/coreui-chartjs.bundle.js"></script>
 <script src="vendors/@coreui/utils/js/coreui-utils.js"></script>
 <script src="js/main.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="toast/toastr.min.js"></script>
+<script>
+    toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-right",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }
+</script>
+<script>
+    @if(Session::has('message'))
+    var type = "{{ Session::get('status', 'info') }}";
+    switch(type){
+        case 'info':
+            toastr.info("{{ Session::get('message') }}");
+            break;
+        case 'warning':
+            toastr.warning("{{ Session::get('message') }}");
+            break;
+        case 'success':
+            toastr.success("{{ Session::get('message') }}");
+            break;
+        case 'error':
+            toastr.error("{{ Session::get('message') }}");
+            break;
+    }
+    @endif
+</script>
+@stack('scripts')
 
 </body>
 </html>
