@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Client;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Tour;
 
 class RouteController extends Controller
 {
@@ -20,7 +21,8 @@ class RouteController extends Controller
 
     public function tours()
     {
-        return view('client.tours');
+        $tours = Tour::paginate(20);
+        return view('client.tours', compact('tours'));
     }
 
     public function contact()

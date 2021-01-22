@@ -4,6 +4,10 @@
     <link rel="stylesheet" href="/assets/css/checkout.css">
 @endpush
 
+@if(!Auth::check())
+    <script>window.location = "{{ route('show_login') }}";</script>
+@endif
+
 @section('content')
     <div class="content container">
         <h3>Thanh toán</h3>

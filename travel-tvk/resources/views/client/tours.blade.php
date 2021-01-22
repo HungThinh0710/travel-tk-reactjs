@@ -71,245 +71,251 @@
                 <h3 class="font-weight-bold">TOUR Tại Đà Nẵng </h3>
             </div>
             <div class="row">
-                <div class="col-md-3 col-sm-12">
-                    <div class="img-group">
-                        <div class="overlay">
-                        </div>
-                        <a href="#">CHI TIẾT</a>
-                        <img src="./assets/images/dac-trung.jfif" alt="">
+                @foreach($tours as $tour)
+                    <div class="col-md-3 col-sm-12">
+                        <div class="img-group">
+                            <div class="overlay">
+                            </div>
+                            <a href="{{route('client_get_detail_tour', $tour->id)}}">CHI TIẾT</a>
+                            <img src="./assets/images/dac-trung.jfif" alt="">
 
-                    </div>
-                    <div class="content-tour">
-                        <p>Bà Nà</p>
-                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>
-                        <p>3.000.000đ</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-12">
-                    <div class="img-group">
-                        <div class="overlay">
                         </div>
-                        <a href="#">CHI TIẾT</a>
-                        <img src="./assets/images/travel-9.jfif" alt="">
-
-                    </div>
-                    <div class="content-tour">
-                        <p>Cầu rồng</p>
-                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>
-                        <p>3.000.000đ</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-12">
-                    <div class="img-group">
-                        <div class="overlay">
+                        <div class="content-tour">
+                            <p>{{$tour->name}}</p>
+                            <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>
+                            <p>3.000.000đ</p>
                         </div>
-                        <a href="#">CHI TIẾT</a>
-                        <img src="./assets/images/tour-vhlong.jfif" alt="">
+                    </div>
+                @endforeach
+                <div style="align-items: center">
+                    {{$tours->links()}}
 
-                    </div>
-                    <div class="content-tour">
-                        <p>Cù lao tràm</p>
-                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>
-                        <p>3.000.000đ</p>
-                    </div>
                 </div>
-                <div class="col-md-3 col-sm-12">
-                    <div class="img-group">
-                        <div class="overlay">
-                        </div>
-                        <a href="#">CHI TIẾT</a>
-                        <img src="./assets/images/tour-japan.jfif" alt="">
+{{--                <div class="col-md-3 col-sm-12">--}}
+{{--                    <div class="img-group">--}}
+{{--                        <div class="overlay">--}}
+{{--                        </div>--}}
+{{--                        <a href="#">CHI TIẾT</a>--}}
+{{--                        <img src="./assets/images/travel-9.jfif" alt="">--}}
 
-                    </div>
-                    <div class="content-tour">
-                        <p>Núi thần tài</p>
-                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>
-                        <p>3.000.000đ</p>
-                    </div>
-                </div>
+{{--                    </div>--}}
+{{--                    <div class="content-tour">--}}
+{{--                        <p>Cầu rồng</p>--}}
+{{--                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>--}}
+{{--                        <p>3.000.000đ</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-3 col-sm-12">--}}
+{{--                    <div class="img-group">--}}
+{{--                        <div class="overlay">--}}
+{{--                        </div>--}}
+{{--                        <a href="#">CHI TIẾT</a>--}}
+{{--                        <img src="./assets/images/tour-vhlong.jfif" alt="">--}}
+
+{{--                    </div>--}}
+{{--                    <div class="content-tour">--}}
+{{--                        <p>Cù lao tràm</p>--}}
+{{--                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>--}}
+{{--                        <p>3.000.000đ</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-3 col-sm-12">--}}
+{{--                    <div class="img-group">--}}
+{{--                        <div class="overlay">--}}
+{{--                        </div>--}}
+{{--                        <a href="#">CHI TIẾT</a>--}}
+{{--                        <img src="./assets/images/tour-japan.jfif" alt="">--}}
+
+{{--                    </div>--}}
+{{--                    <div class="content-tour">--}}
+{{--                        <p>Núi thần tài</p>--}}
+{{--                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>--}}
+{{--                        <p>3.000.000đ</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </div>
-        <br>
-        <div class="personal-tour container">
-            <div class="row">
-                <div class="col-md-3 col-sm-12">
-                    <div class="img-group">
-                        <div class="overlay">
-                        </div>
-                        <a href="#">CHI TIẾT</a>
-                        <img src="./assets/images/dac-trung.jfif" alt="">
+{{--        <br>--}}
+{{--        <div class="personal-tour container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-md-3 col-sm-12">--}}
+{{--                    <div class="img-group">--}}
+{{--                        <div class="overlay">--}}
+{{--                        </div>--}}
+{{--                        <a href="#">CHI TIẾT</a>--}}
+{{--                        <img src="./assets/images/dac-trung.jfif" alt="">--}}
 
-                    </div>
-                    <div class="content-tour">
-                        <p>Bà Nà</p>
-                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>
-                        <p>3.000.000đ</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-12">
-                    <div class="img-group">
-                        <div class="overlay">
-                        </div>
-                        <a href="#">CHI TIẾT</a>
-                        <img src="./assets/images/tour-ca-nhan.jfif" alt="">
+{{--                    </div>--}}
+{{--                    <div class="content-tour">--}}
+{{--                        <p>Bà Nà</p>--}}
+{{--                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>--}}
+{{--                        <p>3.000.000đ</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-3 col-sm-12">--}}
+{{--                    <div class="img-group">--}}
+{{--                        <div class="overlay">--}}
+{{--                        </div>--}}
+{{--                        <a href="#">CHI TIẾT</a>--}}
+{{--                        <img src="./assets/images/tour-ca-nhan.jfif" alt="">--}}
 
-                    </div>
-                    <div class="content-tour">
-                        <p>Cầu rồng</p>
-                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>
-                        <p>3.000.000đ</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-12">
-                    <div class="img-group">
-                        <div class="overlay">
-                        </div>
-                        <a href="#">CHI TIẾT</a>
-                        <img src="./assets/images/tour-vhlong.jfif" alt="">
+{{--                    </div>--}}
+{{--                    <div class="content-tour">--}}
+{{--                        <p>Cầu rồng</p>--}}
+{{--                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>--}}
+{{--                        <p>3.000.000đ</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-3 col-sm-12">--}}
+{{--                    <div class="img-group">--}}
+{{--                        <div class="overlay">--}}
+{{--                        </div>--}}
+{{--                        <a href="#">CHI TIẾT</a>--}}
+{{--                        <img src="./assets/images/tour-vhlong.jfif" alt="">--}}
 
-                    </div>
-                    <div class="content-tour">
-                        <p>Cù lao tràm</p>
-                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>
-                        <p>3.000.000đ</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-12">
-                    <div class="img-group">
-                        <div class="overlay">
-                        </div>
-                        <a href="#">CHI TIẾT</a>
-                        <img src="./assets/images/tour-japan.jfif" alt="">
+{{--                    </div>--}}
+{{--                    <div class="content-tour">--}}
+{{--                        <p>Cù lao tràm</p>--}}
+{{--                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>--}}
+{{--                        <p>3.000.000đ</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-3 col-sm-12">--}}
+{{--                    <div class="img-group">--}}
+{{--                        <div class="overlay">--}}
+{{--                        </div>--}}
+{{--                        <a href="#">CHI TIẾT</a>--}}
+{{--                        <img src="./assets/images/tour-japan.jfif" alt="">--}}
 
-                    </div>
-                    <div class="content-tour">
-                        <p>Núi thần tài</p>
-                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>
-                        <p>3.000.000đ</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="personal-tour container">
-            <div class="row">
-                <div class="col-md-3 col-sm-12">
-                    <div class="img-group">
-                        <div class="overlay">
-                        </div>
-                        <a href="#">CHI TIẾT</a>
-                        <img src="./assets/images/dac-trung.jfif" alt="">
+{{--                    </div>--}}
+{{--                    <div class="content-tour">--}}
+{{--                        <p>Núi thần tài</p>--}}
+{{--                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>--}}
+{{--                        <p>3.000.000đ</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <div class="personal-tour container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-md-3 col-sm-12">--}}
+{{--                    <div class="img-group">--}}
+{{--                        <div class="overlay">--}}
+{{--                        </div>--}}
+{{--                        <a href="#">CHI TIẾT</a>--}}
+{{--                        <img src="./assets/images/dac-trung.jfif" alt="">--}}
 
-                    </div>
-                    <div class="content-tour">
-                        <p>Bà Nà</p>
-                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>
-                        <p>3.000.000đ</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-12">
-                    <div class="img-group">
-                        <div class="overlay">
-                        </div>
-                        <a href="#">CHI TIẾT</a>
-                        <img src="./assets/images/tour-ca-nhan.jfif" alt="">
+{{--                    </div>--}}
+{{--                    <div class="content-tour">--}}
+{{--                        <p>Bà Nà</p>--}}
+{{--                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>--}}
+{{--                        <p>3.000.000đ</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-3 col-sm-12">--}}
+{{--                    <div class="img-group">--}}
+{{--                        <div class="overlay">--}}
+{{--                        </div>--}}
+{{--                        <a href="#">CHI TIẾT</a>--}}
+{{--                        <img src="./assets/images/tour-ca-nhan.jfif" alt="">--}}
 
-                    </div>
-                    <div class="content-tour">
-                        <p>Cầu rồng</p>
-                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>
-                        <p>3.000.000đ</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-12">
-                    <div class="img-group">
-                        <div class="overlay">
-                        </div>
-                        <a href="#">CHI TIẾT</a>
-                        <img src="./assets/images/tour-vhlong.jfif" alt="">
+{{--                    </div>--}}
+{{--                    <div class="content-tour">--}}
+{{--                        <p>Cầu rồng</p>--}}
+{{--                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>--}}
+{{--                        <p>3.000.000đ</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-3 col-sm-12">--}}
+{{--                    <div class="img-group">--}}
+{{--                        <div class="overlay">--}}
+{{--                        </div>--}}
+{{--                        <a href="#">CHI TIẾT</a>--}}
+{{--                        <img src="./assets/images/tour-vhlong.jfif" alt="">--}}
 
-                    </div>
-                    <div class="content-tour">
-                        <p>Cù lao tràm</p>
-                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>
-                        <p>3.000.000đ</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-12">
-                    <div class="img-group">
-                        <div class="overlay">
-                        </div>
-                        <a href="#">CHI TIẾT</a>
-                        <img src="./assets/images/tour-japan.jfif" alt="">
+{{--                    </div>--}}
+{{--                    <div class="content-tour">--}}
+{{--                        <p>Cù lao tràm</p>--}}
+{{--                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>--}}
+{{--                        <p>3.000.000đ</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-3 col-sm-12">--}}
+{{--                    <div class="img-group">--}}
+{{--                        <div class="overlay">--}}
+{{--                        </div>--}}
+{{--                        <a href="#">CHI TIẾT</a>--}}
+{{--                        <img src="./assets/images/tour-japan.jfif" alt="">--}}
 
-                    </div>
-                    <div class="content-tour">
-                        <p>Núi thần tài</p>
-                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>
-                        <p>3.000.000đ</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="personal-tour container">
-            <div class="row">
-                <div class="col-md-3 col-sm-12">
-                    <div class="img-group">
-                        <div class="overlay">
-                        </div>
-                        <a href="#">CHI TIẾT</a>
-                        <img src="https://dulichdalat.pro/wp-content/uploads/2016/08/da-lat-lam-dong-3.jpg" alt="">
+{{--                    </div>--}}
+{{--                    <div class="content-tour">--}}
+{{--                        <p>Núi thần tài</p>--}}
+{{--                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>--}}
+{{--                        <p>3.000.000đ</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <div class="personal-tour container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-md-3 col-sm-12">--}}
+{{--                    <div class="img-group">--}}
+{{--                        <div class="overlay">--}}
+{{--                        </div>--}}
+{{--                        <a href="#">CHI TIẾT</a>--}}
+{{--                        <img src="https://dulichdalat.pro/wp-content/uploads/2016/08/da-lat-lam-dong-3.jpg" alt="">--}}
 
-                    </div>
-                    <div class="content-tour">
-                        <p>Bà Nà</p>
-                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>
-                        <p>3.000.000đ</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-12">
-                    <div class="img-group">
-                        <div class="overlay">
-                        </div>
-                        <a href="#">CHI TIẾT</a>
-                        <img src="./assets/images/tour-ca-nhan.jfif" alt="">
+{{--                    </div>--}}
+{{--                    <div class="content-tour">--}}
+{{--                        <p>Bà Nà</p>--}}
+{{--                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>--}}
+{{--                        <p>3.000.000đ</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-3 col-sm-12">--}}
+{{--                    <div class="img-group">--}}
+{{--                        <div class="overlay">--}}
+{{--                        </div>--}}
+{{--                        <a href="#">CHI TIẾT</a>--}}
+{{--                        <img src="./assets/images/tour-ca-nhan.jfif" alt="">--}}
 
-                    </div>
-                    <div class="content-tour">
-                        <p>Cầu rồng</p>
-                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>
-                        <p>3.000.000đ</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-12">
-                    <div class="img-group">
-                        <div class="overlay">
-                        </div>
-                        <a href="#">CHI TIẾT</a>
-                        <img src="./assets/images/tour-vhlong.jfif" alt="">
+{{--                    </div>--}}
+{{--                    <div class="content-tour">--}}
+{{--                        <p>Cầu rồng</p>--}}
+{{--                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>--}}
+{{--                        <p>3.000.000đ</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-3 col-sm-12">--}}
+{{--                    <div class="img-group">--}}
+{{--                        <div class="overlay">--}}
+{{--                        </div>--}}
+{{--                        <a href="#">CHI TIẾT</a>--}}
+{{--                        <img src="./assets/images/tour-vhlong.jfif" alt="">--}}
 
-                    </div>
-                    <div class="content-tour">
-                        <p>Cù lao tràm</p>
-                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>
-                        <p>3.000.000đ</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-12">
-                    <div class="img-group">
-                        <div class="overlay">
-                        </div>
-                        <a href="#">CHI TIẾT</a>
-                        <img src="./assets/images/tour-japan.jfif" alt="">
+{{--                    </div>--}}
+{{--                    <div class="content-tour">--}}
+{{--                        <p>Cù lao tràm</p>--}}
+{{--                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>--}}
+{{--                        <p>3.000.000đ</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-3 col-sm-12">--}}
+{{--                    <div class="img-group">--}}
+{{--                        <div class="overlay">--}}
+{{--                        </div>--}}
+{{--                        <a href="#">CHI TIẾT</a>--}}
+{{--                        <img src="./assets/images/tour-japan.jfif" alt="">--}}
 
-                    </div>
-                    <div class="content-tour">
-                        <p>Núi thần tài</p>
-                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>
-                        <p>3.000.000đ</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+{{--                    </div>--}}
+{{--                    <div class="content-tour">--}}
+{{--                        <p>Núi thần tài</p>--}}
+{{--                        <p><span style="color: #FFC107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></p>--}}
+{{--                        <p>3.000.000đ</p>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
 
     </div>
