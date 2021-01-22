@@ -14,6 +14,9 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
+Route::get('hashed', function(){
+    return \Illuminate\Support\Facades\Hash::make('123123');
+});
 
 /*
  * Route for redirect navigation
@@ -24,12 +27,6 @@ Route::get('/tours/{id}', 'Client\\TourController@getTour')->name('client_get_de
 //Route::get('/tours/book-tour', 'Client\\TourController@showBookTour')->name('client_show_book_tour');
 Route::get('/checkout', 'Client\\CheckoutController@showCheckout')->name('show_checkout');
 Route::post('/checkout/payment', 'Client\\CheckoutController@showPayment')->name('show_payment');
-
-//PAYPAL
-Route::get('/checkout/payment/paypal', 'Client\\CheckoutController@executePaymentPaypal')->name('execute_paypal');
-Route::get('/checkout/payment/success-payment/{invoiceId}', 'Client\\CheckoutController@paymentSuccess')->name('success.payment');
-Route::get('/checkout/payment/failed-payment/{invoiceId}', 'Client\\CheckoutController@paymentSuccess')->name('failed.payment');
-Route::get('/checkout/payment/cancel-payment', 'Client\\CheckoutController@cancelPayment')->name('cancel.payment');
 
 Route::get('/news', 'Client\\RouteController@news')->name('show_news');
 Route::get('/contact', 'Client\\RouteController@contact')->name('show_contact');
@@ -44,6 +41,17 @@ Route::post('login','Client\\AuthenticateController@login')->name('login');
 Route::group(['middleware' => 'auth'], function() {
 //    Route::get('/profile', function (){return "Hello All authen";});
     Route::get('/profile', 'Client\\RouteController@profile')->name('show_profile');
+
+    //PAYPAL
+    Route::get('/checkout/payment/paypal', 'Client\\CheckoutController@executePaymentPaypal')->name('execute_paypal');
+    Route::get('/checkout/payment/success-payment/{invoiceId}', 'Client\\CheckoutController@paymentSuccess')->name('success.payment');
+    Route::get('/checkout/payment/failed-payment/{invoiceId}', 'Client\\CheckoutController@paymentSuccess')->name('failed.payment');
+    Route::get('/checkout/payment/cancel-payment', 'Client\\CheckoutController@cancelPayment')->name('cancel.payment');
+
+    Route::get('/logout/', function (){
+        Auth::logout();
+        return redirect(route('login'));
+    });
 });
 //Route::get('/admincp/login','RouteNavigationController@login')->name('show_login');
 
