@@ -21,12 +21,12 @@
                     {{csrf_field()}}
                     <div class="form-group pt-1 pb-1">
                         <label for="exampleInputEmail1">Tài khoản email</label>
-                        <input type="email" name="email" value="" class="form-control input-item" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tài khoản Email của bạn">
+                        <input type="email" name="email" value="user@gg.cc" class="form-control input-item" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tài khoản Email của bạn">
                         <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                     </div>
                     <div class="form-group pt-1">
                         <label for="exampleInputPassword1">Mật khẩu</label>
-                        <input type="password" name="password" value="" class="form-control  input-item" id="exampleInputPassword1" placeholder="******">
+                        <input type="password" name="password" value="123123" class="form-control  input-item" id="exampleInputPassword1" placeholder="******">
                     </div>
                     <a class="text-right text-decoration-none" href="#"><small id="forfotPassword" class="form-text text-color-black">Quên mật khẩu?</small></a>
                     <div class="form-group enter-group-btn text-center pt-4 pb-4">
